@@ -40,6 +40,7 @@
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'js/*.js'",
 
-    "build:scripts" : "wp-scripts build"
+    "build:scripts" : "wp-scripts build",
+    "start-build": "wp-scripts start"
   }
 }
