@@ -1,0 +1,97 @@
+@import url('inc/mobile-nav.css'); /* Mobile navigation 
+
+/** HEADER **/
+header#masthead {
+    background-color: #000000;
+    color: ghostwhite;
+}
+
+
+/** NAVIGATION **/
+nav#site-navigation {
+    display: none;
+}
+
+nav#site-navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav#site-navigation li {
+    margin: 0;
+    padding: 0;
+}
+
+nav#site-navigation li a {
+    color: #e1e1e1;
+}
+
+nav#site-navigation li a:hover {
+    color:#c69c6c;
+}
+
+nav#site-navigation ul.dropdown-menu {
+    background-color: #000000;
+}
+nav#site-navigation .dropdown-item {
+    background-color: #000000;
+    color: #ffffff;
+}
+nav#site-navigation .dropdown-item:focus, nav#site-navigation .dropdown-item:hover {
+    background-color: #000000;
+    color:#c69c6c;
+}
+
+
+@media (min-width: 768px) {
+
+    nav.mobile-navigation {
+        display: none;
+    }
+
+    nav#site-navigation {
+        display: block;
+        font-size: 13px;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    nav#site-navigation {
+        color: green;
+        font-size: 16px;
+    }
+
+}
+
+/** SLIDER **/
+div#slider-homepage {
+    background-color: black;
+}
+
+div#slider-homepage .carousel-caption {
+    bottom: 40%;
+}
+
+
+/** CONTENT **/
+div#content {
+    
+}
+
+div#primary {
+
+}
+
+/** SUB FOOTER **/
+div#sub-footer {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/** FOOTER **/
+footer#colophon {
+    background-color: #c69c6c;
+}
