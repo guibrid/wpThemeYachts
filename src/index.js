@@ -13,6 +13,8 @@ registerBlockType('alecaddd/custom-cta', {
 
     edit() {
 
+        return <div>Hello World</div>
+        
     },
 
     save() {}
