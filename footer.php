@@ -17,11 +17,13 @@
 	<div id="sub-footer"><!-- #sub-footer -->
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
-					<span> Nous contacter </span>
+				<div class="col-md-6 text-md-left contact">
+					<span>Nous contacter</span><br />
+					<a href="#" class="button">Un devis ? ></a>
 				</div>
-				<div class="col-md-6">
-					<span> Newsletter </span>
+				<div class="col-md-6 text-md-left newsletter">
+					<span>Newsletter</span><br />
+					<input type="text" name="newsletter" /><a href="#" class="button">S'abonner ></a>
 				</div>
 			</div>
 		</div>

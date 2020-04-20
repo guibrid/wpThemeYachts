@@ -134,6 +134,42 @@ div#contactForm input[type=submit] {
 div#sub-footer {
     background-color: #000000;
     color: #ffffff;
+    font-weight: bold;
+    padding: 15px 0 20px 0;
+    border: 8px solid #ffffff;
+    text-align: center;
+}
+
+div#sub-footer div.contact {
+    margin-bottom: 20px;
+}
+
+div#sub-footer input[type=text] {
+    font-size: 13px;
+    padding: 7px;
+    margin-right: 15px;
+    width: 250px;
+}
+
+div#sub-footer .button {
+    color: #000000;
+    background-color: #ffffff;
+    border-radius:20px;
+    display: inline-block;
+    font-weight: normal;
+    padding: 8px 25px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+div#sub-footer .button:hover {
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    div#sub-footer div.contact {
+        margin-bottom: 0px;
+    }
 }
 
 /** FOOTER **/
