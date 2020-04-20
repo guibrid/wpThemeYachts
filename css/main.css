@@ -1,5 +1,9 @@
 @import url('inc/mobile-nav.css'); /* Mobile navigation 
 
+/** GENERAL **/
+
+
+
 /** HEADER **/
 header#masthead {
     background-color: #000000;
@@ -77,11 +81,52 @@ div#slider-homepage .carousel-caption {
 
 
 /** CONTENT **/
-div#content {
-    
+div.site-main {
+    background-color: #ffffff;
 }
 
-div#primary {
+/** CONTACT PAGE */
+div.contact-page h1 {
+    color: #C69C6C;
+    margin: 50px auto;
+    font-weight: 700;
+}
+
+div#contactForm label {
+    display: block;
+}
+
+div#contactForm label {
+    display: block;
+}
+
+div#contactForm input[type=text], div#contactForm input[type=email], div#contactForm select, div#contactForm textarea {
+    border: 2px solid #C69C6C;
+    border-radius:6px;
+    width: 100%;
+    padding: 5px 10px;
+    color: #767676;
+}
+
+div#contactForm input[type=submit] {
+    background-color: #000000;
+    border-radius:25px;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 8px 25px;
+    font-size: 13px;
+    border: 0px;
+}
+
+@media (min-width: 1200px) {
+
+    div#contactForm {
+        padding-right: 50px;
+    }
+
+    div#contactContent {
+        padding-left: 50px;
+    }
 
 }
 
