@@ -33,11 +33,12 @@
 	<footer id="colophon" class="site-footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-10">
-					<span> Tel<br />Email </span>
+				<div class="col-sm-6 contactDetails">
+					<span> Tel: 04 72 56 51 23<br />Mail : contact@lesyatchsdelyon.com</span>
 				</div>
-				<div class="col-sm-2">
-					<span> Copyright </span>
+				<div class="col-sm-6 text-right">
+					<div class="copyright"> &copy;Copyright 2020 | <b>All right reserved PROACTIVE</b><br />Designed by marinemarcolet.com & Webaxis</div>
+					<div class="social"><i class="fab fa-facebook-f fa-lg"></i>&nbsp;&nbsp;<i class="fab fa-instagram fa-lg"></i>&nbsp;&nbsp;<i class="fab fa-twitter fa-lg"></i></a>
 				</div>
 			</div>
 		</div>

@@ -125,6 +125,8 @@ add_action( 'after_setup_theme', 'yatchslyon_content_width', 0 );
 function yatchslyon_scripts() {
 	wp_enqueue_style( 'yatchslyon-style', get_stylesheet_uri(), array(), _S_VERSION );
 
+	wp_enqueue_style( 'yatchslyon-fontawesome', get_template_directory_uri() .'/css/all.min.css');
+
 	wp_enqueue_style( 'yatchslyon-main', get_template_directory_uri() .'/css/main.css');
 
 	wp_enqueue_script( 'yatchslyon-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );

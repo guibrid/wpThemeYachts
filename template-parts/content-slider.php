@@ -55,10 +55,6 @@ if ($my_query->have_posts()) {?>
 
     </div>
 
-    <script>
-    $('.carousel').carousel()
-    </script>
-
 <?php
 } // end if have_posts
 ?>
