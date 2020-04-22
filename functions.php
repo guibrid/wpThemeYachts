@@ -127,6 +127,8 @@ function yatchslyon_scripts() {
 
 	wp_enqueue_style( 'yatchslyon-fontawesome', get_template_directory_uri() .'/css/all.min.css');
 
+	wp_enqueue_style( 'yatchslyon-AnimateOnScroll', 'https://unpkg.com/aos@next/dist/aos.css');
+
 	wp_enqueue_style( 'yatchslyon-main', get_template_directory_uri() .'/css/main.css');
 
 	wp_enqueue_script( 'yatchslyon-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
@@ -136,6 +138,8 @@ function yatchslyon_scripts() {
 	wp_enqueue_script( 'yatchslyon-jquery', get_template_directory_uri() . '/js/jquery-3.5.0.min.js', array(), _S_VERSION, true );
 	
 	wp_enqueue_script( 'yatchslyon-bootstrapjs', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), _S_VERSION, true );
+
+	wp_enqueue_script( 'yatchslyon-AnimateOnScrolljs', 'https://unpkg.com/aos@next/dist/aos.js', array(), _S_VERSION, true );
 
 	wp_enqueue_script( 'yatchslyon-customjs', get_template_directory_uri() . '/js/custom.yatchslyon.js', array(), _S_VERSION, true );
 

@@ -12,3 +12,6 @@ function closeNav() {
 
 /* Init Home page slider */
 $('.carousel').carousel();
+
+/* Init Animation on Scrool */
+AOS.init();

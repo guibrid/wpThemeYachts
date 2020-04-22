@@ -17,11 +17,11 @@
 	<div id="sub-footer"><!-- #sub-footer -->
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 text-lg-left contact">
+				<div class="col-lg-6 text-lg-left contact" data-aos="slide-up">
 					<span>Nous contacter</span><br />
 					<a href="#" class="customButton whiteButton">Un devis ? <i class="fas fa-chevron-right fa-xs"></i></a>
 				</div>
-				<div class="col-lg-6 text-lg-left newsletter">
+				<div class="col-lg-6 text-lg-left newsletter" data-aos="slide-up">
 					<span>Newsletter</span><br />
 					<input type="text" name="newsletter" /><a href="#" class="customButton whiteButton">S'abonner <i class="fas fa-chevron-right fa-xs"></i></a>
 				</div>
