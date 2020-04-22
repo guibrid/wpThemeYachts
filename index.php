@@ -22,6 +22,7 @@ get_header();
 				<div class="container-fluid">
 				<div class="row">
 					<div class="col-12">
+						<?php get_template_part( 'template-parts/content-sliderNews'); ?>
 						<?php get_template_part( 'template-parts/content-slider'); ?>
 					</div>
 				</div>

@@ -30,7 +30,7 @@
         <nav class="mobile-navigation text-right">  
           
           <!-- sidenav trigger -->
-          <span onclick="openNav()">MENU</span>
+          <span onclick="openNav()" class="burger"><i class="fas fa-bars"></i> MENU</span>
 
           <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

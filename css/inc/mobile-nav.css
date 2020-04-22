@@ -1,9 +1,22 @@
  /* The side navigation menu */
+
+ .mobile-navigation .burger {
+    margin-top: 17px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+ }
+
+ .mobile-navigation .burger:hover {
+    color: #c69c6c;
+ }
+
  .sidenav {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 200; /* Stay on top */
     top: 0;
     right: 0;
     background-color: #111; /* Black*/
