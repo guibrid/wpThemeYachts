@@ -19,11 +19,11 @@
 			<div class="row">
 				<div class="col-md-6 text-md-left contact">
 					<span>Nous contacter</span><br />
-					<a href="#" class="button">Un devis ? ></a>
+					<a href="#" class="customButton whiteButton">Un devis ? <i class="fas fa-chevron-right fa-xs"></i></a>
 				</div>
 				<div class="col-md-6 text-md-left newsletter">
 					<span>Newsletter</span><br />
-					<input type="text" name="newsletter" /><a href="#" class="button">S'abonner ></a>
+					<input type="text" name="newsletter" /><a href="#" class="customButton whiteButton">S'abonner <i class="fas fa-chevron-right fa-xs"></i></a>
 				</div>
 			</div>
 		</div>

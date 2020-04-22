@@ -108,15 +108,6 @@ div#contactForm input[type=text], div#contactForm input[type=email], div#contact
     color: #767676;
 }
 
-div#contactForm input[type=submit] {
-    background-color: #000000;
-    border-radius:25px;
-    color: #ffffff;
-    text-transform: uppercase;
-    padding: 8px 25px;
-    font-size: 13px;
-    border: 0px;
-}
 
 @media (min-width: 1200px) {
 
@@ -151,21 +142,6 @@ div#sub-footer input[type=text] {
     width: 250px;
 }
 
-div#sub-footer .button {
-    color: #000000;
-    background-color: #ffffff;
-    border-radius:20px;
-    display: inline-block;
-    font-weight: normal;
-    padding: 8px 25px;
-    font-size: 13px;
-    text-transform: uppercase;
-}
-
-div#sub-footer .button:hover {
-    text-decoration: none;
-}
-
 @media (min-width: 768px) {
     div#sub-footer div.contact {
         margin-bottom: 0px;
@@ -184,4 +160,34 @@ footer .copyright {
 
 footer .contactDetails {
     font-weight: 700;
+}
+
+
+
+/** BUTTON **/
+.customButton {
+    border-radius:20px;
+    display: inline-block;
+    font-weight: normal;
+    padding: 8px 25px;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border: none;
+}
+
+.whiteButton {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.blackButton {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.customButton:hover {
+    background-color: #C69C6C;
+    color: #ffffff;
+    text-decoration: none;
 }

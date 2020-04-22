@@ -20,16 +20,9 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
-				<?php
-				yatchslyon_posted_on();
-				yatchslyon_posted_by();
-				?>
-			</div><!-- .entry-meta -->
+
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php yatchslyon_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -57,7 +50,5 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php yatchslyon_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+
 </article><!-- #post-<?php the_ID(); ?> -->
