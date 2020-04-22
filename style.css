@@ -13,3 +13,20 @@ Text Domain: yatchslyon
 @import url("css/bootstrap-reboot.min.css");
 @import url("css/bootstrap.min.css");
 @import url("css/bootstrap-grid.min.css");
+
+@font-face {
+    font-family: "Gotham";
+    src: url("webfonts/Gotham-Black.otf");
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: url("webfonts/Gotham-Bold.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('webfonts/GothamBook.ttf');
+}

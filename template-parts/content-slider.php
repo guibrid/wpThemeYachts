@@ -26,9 +26,9 @@ if ($my_query->have_posts()) {?>
             $active = ($i == 0) ? " active" : "";
             $image = get_field('slider_background');
             echo '<div class="carousel-item '.$active.'">';
-            if( !empty( $image ) ): ?>
-              <img class="d-block" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="100%" height="600px">
-            <?php endif; 
+            /*if( !empty( $image ) ):*/ ?>
+              <div class="imgBlock" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div>
+            <?php /*endif; */
             echo '<div class="carousel-caption d-none d-md-block">
                   <h5>'.get_field( "slider_titre" ).'</h5>
                   <p>'.get_field( "slider_description" ).'</p>
