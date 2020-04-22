@@ -11,4 +11,4 @@ function closeNav() {
 } 
 
 /* Init Home page slider */
-$('.carousel').carousel()
+$('.carousel').carousel();

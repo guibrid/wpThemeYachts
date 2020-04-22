@@ -30,25 +30,13 @@ if ($my_query->have_posts()) {?>
               <div class="imgBlock" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div>
             <?php /*endif; */
             echo '<div class="carousel-caption d-none d-md-block">
-                  <h5>'.get_field( "slider_titre" ).'</h5>
-                  <p>'.get_field( "slider_description" ).'</p>
+                  '.get_field( "slider_content" ).'
                   </div>';
             echo '</div>';
             $i++;
         endwhile; ?>
 
       </div>
-
-      <?php if ($my_query->post_count > 1): ?>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-      <?php endif; ?>
 
       <?php wp_reset_postdata(); /* Restore original Post Data */ ?>
 

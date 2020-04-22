@@ -4,8 +4,9 @@
 
 
 /** GENERAL **/
-
-
+body {
+    font-family: 'Gotham';
+}
 
 /** HEADER **/
 header#masthead {
@@ -57,13 +58,6 @@ nav#site-navigation .dropdown-item {
 nav#site-navigation .dropdown-item:focus, nav#site-navigation .dropdown-item:hover {
     background-color: #000000;
     color:#c69c6c;
-}
-
-
-@media (min-width: 768px) {
-
-
-
 }
 
 @media (min-width: 992px) {
@@ -133,6 +127,9 @@ div#slider-homepage .carousel-caption {
     div#slider-homepage div.imgBlock {
         height: 700px;
     }
+    div#slider-homepage div.col-12 {
+        padding: 0 35px 0 35px;
+    }
  }
 
 
@@ -197,7 +194,7 @@ div#sub-footer input[type=text] {
     width: 250px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     div#sub-footer div.contact {
         margin-bottom: 0px;
     }
@@ -215,6 +212,15 @@ footer .copyright {
 
 footer .contactDetails {
     font-weight: 700;
+}
+
+footer#colophon div.social a {
+    color: #000000;
+    transition: 0.3s;
+}
+
+footer#colophon div.social a:hover {
+    color: #ffffff;
 }
 
 
