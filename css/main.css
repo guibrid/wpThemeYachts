@@ -142,20 +142,13 @@ div#slider-homepage .carousel-caption {
 
 @media (min-width: 992px) {
 
-    div#slider-homepage div.imgBlock {
-        height: 600px;
-    }
-
     div#slider-homepage div.col-12 .newsblock {
         right:100px;
     }
+    
  }
 
 @media (min-width: 1200px) { 
-
-    div#slider-homepage div.imgBlock {
-        height: 700px;
-    }
 
     div#slider-homepage div.col-12 {
         padding: 0 35px 0 35px;

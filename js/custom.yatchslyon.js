@@ -15,3 +15,9 @@ $('.carousel').carousel();
 
 /* Init Animation on Scrool */
 AOS.init();
+
+/* Ajuster la hauteur du slider à la hauteur de page sur les desktops */
+if($(window).width() >= 992) {
+    var sliderHeight = $(window).height() - 80;
+    $(".carousel-inner .imgBlock").height(sliderHeight);
+}
