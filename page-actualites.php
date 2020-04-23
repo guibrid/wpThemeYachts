@@ -6,7 +6,7 @@ get_header();
 
 ?>
 
-<div id="primary" class="content-area contact-actu">
+<div id="primary" class="content-area actu-page">
 	<main id="main" class="site-main">
 
     <div class="container">
@@ -23,24 +23,36 @@ get_header();
 
         ?>
 
-        <?php if ( $query->have_posts() ) : ?>
+        <?php if ( $query->have_posts() ) :  $i =1; ?>
 
-        <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+        <?php while ( $query->have_posts() ) : $query->the_post(); 
 
-        <div class="row">
+            $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),"large"); 
 
-        <div class="col-sm-6">
-            <?php the_post_thumbnail( array(500, 500) ); ?>
-        </div>
+            $imageBlock = '<div class="col-sm-6" data-aos="zoom-in">
+                            <div class="actu-cover" style="background-image: url('.$featured_img_url.')"></div>
+                           </div>';
 
-        <div class="col-sm-6">
-            <h2><?php the_title(); ?></h2>
-            <p><?php the_excerpt(); ?></p>
-            <p><?php the_date( 'd.m.Y', '<span>', '</span>' ); ?></p>
-            <p><a href="#" class="customButton blackButton">En savoir plus <i class="fas fa-chevron-right fa-xs"></i></a></p>
-        </div>
+            $contentBlock = '<div class="col-sm-6" data-aos="zoom-in">
+                                <h2>'.get_the_title().'</h2>
+                                <p class="excerptActu">'.substr(get_the_excerpt(), 0, 350).'...</p>
+                                <p class="dateActu">'.get_the_date( "d.m.Y").'</p>
+                                <div><a href="#" class="customButton blackButton">En savoir plus <i class="fas fa-chevron-right fa-xs"></i></a></div>
+                            </div>';
 
-        </div>
+            if ($i % 2 != 0){
+                $article = $imageBlock.$contentBlock;
+            } else {
+                $article = $contentBlock.$imageBlock;
+            }
+            $i++;
+        ?>
+
+            <div class="row">
+
+                <?php echo $article;?>
+
+            </div>
             
         <?php endwhile; ?>
 

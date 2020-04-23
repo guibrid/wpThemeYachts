@@ -115,7 +115,6 @@ div#slider-homepage div.imgBlock {
     background-repeat: none;
     background-size: cover;
     width: 100%;
-    height: 100%;
     height: 300px;
     
 }
@@ -200,6 +199,53 @@ div#contactForm input[type=text], div#contactForm input[type=email], div#contact
         padding-left: 50px;
     }
 
+}
+
+/** ACTUALITE PAGE */
+div.actu-page h1 {
+    color: #C69C6C;
+    margin: 20px auto;
+    font-weight: 700;
+}
+
+div.actu-page div.row {
+    margin-top:25px ;
+    margin-bottom: 25px;
+}
+
+div.actu-page h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+div.actu-page .excerptActu {
+    font-size: 14px;
+    min-height: 100px;
+}
+
+div.actu-page .dateActu {
+    font-size: 10px;
+    background: url('../img/actudate-puce.png') no-repeat center left;
+    padding-left: 27px;
+}
+
+div.actu-page .actu-cover {
+    background-position:center;
+    background-repeat: none;
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 576px) {
+
+    div.actu-page .actu-cover {
+        height: 100%;
+        margin-bottom: 0px;
+    }
+    
 }
 
 /** SUB FOOTER **/
