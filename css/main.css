@@ -248,6 +248,68 @@ div.actu-page .actu-cover {
     
 }
 
+/** EVENEMENTS PAGE */
+div.evenements-page h1 {
+    color: #C69C6C;
+    margin: 50px auto;
+    font-weight: 700;
+}
+div.evenements-page div.evenement {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+div.evenements-page div.evenement a {
+    color: #000000;
+    text-decoration: none;
+}
+
+div.evenements-page div.evenement .img {
+    width: 262px;
+    height: 262px;
+    background-color: #c1996a;
+    border-radius: 200px;
+    border:5px solid #c1996a;
+    display: inline-block;
+    position: relative;
+    background-position:center;
+    background-repeat: none;
+    background-size: cover;
+}
+
+div.evenements-page div.evenement .eventDetails {
+    position: relative;
+    z-index: 2;
+    margin-top: -30px;
+}
+
+div.evenements-page div.evenement .boatName {
+    background-color: black;
+    color: #c1996a;
+    display: inline-block;
+    padding: 5px 20px;
+    font-weight: bold;
+}
+
+div.evenements-page div.evenement .eventName {
+    font-size: 13px;
+    margin: 5px auto 0 auto;
+    text-transform: uppercase;
+}
+
+div.evenements-page div.evenement .prix {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+div.evenements-page div.evenement .prix sup {
+    font-size: 12px;
+}
+
+div.evenements-page div.evenement .duree, div.evenements-page div.evenement .boarding {
+    font-size: 10px;
+}
+
 /** SUB FOOTER **/
 div#sub-footer {
     background-color: #000000;
