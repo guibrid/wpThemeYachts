@@ -19,9 +19,9 @@ function alecaddd_gutenberg_default_colors()
                 'color' => '#000000'
             ),
             array(
-                'name' => 'Pink',
-                'slug' => 'pink',
-                'color' => '#ff4444'
+                'name' => 'Brown',
+                'slug' => 'brown',
+                'color' => '#C69C6C'
             )
         )
     );
@@ -46,9 +46,17 @@ add_action( 'init', 'alecaddd_gutenberg_default_colors' );
 
 function alecaddd_gutenberg_blocks()
 {
-    wp_register_script( 'custom-cta-js', get_template_directory_uri() . '/build/index.js', array( 'wp-blocks' ));
+    wp_register_script( 'custom-cta-js', get_template_directory_uri() . '/build/index.js', array( 'wp-blocks' , 'wp-block-editor'));
 
     register_block_type( 'alecaddd/custom-cta', array(
+        'editor_script' => 'custom-cta-js'
+    ) );
+
+    register_block_type( 'alecaddd/custom-cta2', array(
+        'editor_script' => 'custom-cta-js'
+    ) );
+
+    register_block_type( 'alecaddd/custom-cta3', array(
         'editor_script' => 'custom-cta-js'
     ) );
 }
