@@ -166,3 +166,18 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+// Add backend styles for Gutenberg.
+add_action( 'enqueue_block_editor_assets', 'yatchs_add_gutenberg_assets' );
+
+/**
+ * Load Gutenberg stylesheet.
+ */
+function yatchs_add_gutenberg_assets() {
+	// Load the theme styles within Gutenberg.
+	wp_enqueue_style( 'yatchs-gutenberg', get_theme_file_uri( 'custom-editor-style.css' ), false );
+}
+

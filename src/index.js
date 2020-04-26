@@ -155,9 +155,16 @@ registerBlockType('alecaddd/custom-cta4', {
     description: 'Block to generate a custom Call to Action',
     icon: 'format-image',
     category: 'layout',
+    supports: { // Hey WP, I want to use your alignment toolbar!
+        align: true,
+    },
 
     // custom attributes
     attributes: {
+        align: {
+            type: 'string',
+            default: 'center'
+        },
         title: {
             type: 'string',
             source: 'html',
@@ -188,6 +195,7 @@ registerBlockType('alecaddd/custom-cta4', {
 
     edit({ attributes, setAttributes }) {
         const {
+            align,
             title,
             body,
             titleColor,
@@ -197,6 +205,7 @@ registerBlockType('alecaddd/custom-cta4', {
         } = attributes;
 
         // custom functions
+
         function onChangeTitle(newTitle) {
             setAttributes( { title: newTitle } );
         }
@@ -236,10 +245,8 @@ registerBlockType('alecaddd/custom-cta4', {
                     <p><strong>Select a Background Image</strong></p>
                     <MediaUpload
                         onSelect={ onSelectImage }
-                        //allowedTypes={ ['image'] }
-                        type='image'
+                        type="image" 
                         value={ backgroundImage }
-                        multiple='true'
                         render={ ( { open } ) => (
 							<Button
 								className="editor-media-placeholder__button is-button is-default is-large"
@@ -266,7 +273,8 @@ registerBlockType('alecaddd/custom-cta4', {
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
+                backgroundRepeat: 'no-repeat',
+                textAlign: align
             }}>
             <div className="cta-overlay" style={ {background:overlayColor, opacity:overlayOpacity}}></div>
                 <RichText key="editable"
@@ -288,6 +296,7 @@ registerBlockType('alecaddd/custom-cta4', {
 
     save({ attributes }) {
         const {
+            align,
             title,
             body,
             titleColor,
@@ -301,12 +310,12 @@ registerBlockType('alecaddd/custom-cta4', {
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
+                backgroundRepeat: 'no-repeat',
             }}>
             <div className="cta-overlay" style={ {background:overlayColor, opacity:overlayOpacity}}></div>
                 <h2 style={ { color: titleColor } }>{ title }</h2>
                 <RichText.Content tagName="p" 
-                                  value={ body } />
+                                  value={ body }/>
             </div>
         );
 

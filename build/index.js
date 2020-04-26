@@ -252,8 +252,16 @@ registerBlockType('alecaddd/custom-cta4', {
   description: 'Block to generate a custom Call to Action',
   icon: 'format-image',
   category: 'layout',
+  supports: {
+    // Hey WP, I want to use your alignment toolbar!
+    align: true
+  },
   // custom attributes
   attributes: {
+    align: {
+      type: 'string',
+      default: 'center'
+    },
     title: {
       type: 'string',
       source: 'html',
@@ -284,7 +292,8 @@ registerBlockType('alecaddd/custom-cta4', {
   edit: function edit(_ref5) {
     var attributes = _ref5.attributes,
         setAttributes = _ref5.setAttributes;
-    var title = attributes.title,
+    var align = attributes.align,
+        title = attributes.title,
         body = attributes.body,
         titleColor = attributes.titleColor,
         backgroundImage = attributes.backgroundImage,
@@ -342,11 +351,9 @@ registerBlockType('alecaddd/custom-cta4', {
     })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(PanelBody, {
       title: 'Background image settings'
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("strong", null, "Select a Background Image")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaUpload, {
-      onSelect: onSelectImage //allowedTypes={ ['image'] }
-      ,
+      onSelect: onSelectImage,
       type: "image",
       value: backgroundImage,
-      multiple: "true",
       render: function render(_ref6) {
         var open = _ref6.open;
         return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Button, {
@@ -376,7 +383,8 @@ registerBlockType('alecaddd/custom-cta4', {
         backgroundImage: "url(".concat(backgroundImage, ")"),
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
+        textAlign: align
       }
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "cta-overlay",
@@ -403,7 +411,8 @@ registerBlockType('alecaddd/custom-cta4', {
   },
   save: function save(_ref7) {
     var attributes = _ref7.attributes;
-    var title = attributes.title,
+    var align = attributes.align,
+        title = attributes.title,
         body = attributes.body,
         titleColor = attributes.titleColor,
         backgroundImage = attributes.backgroundImage,
