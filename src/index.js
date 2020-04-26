@@ -1,5 +1,13 @@
 const { registerBlockType } = wp.blocks;
-const { RichText } = wp.blockEditor;
+const { RichText,
+        InspectorControls,
+        ColorPalette,
+        MediaUpload
+} = wp.blockEditor;
+const { PanelBody,
+        Button,
+        RangeControl
+ } = wp.components
 
 registerBlockType('alecaddd/custom-cta', {
     title: 'Call to Action',
@@ -53,8 +61,97 @@ registerBlockType('alecaddd/custom-cta2', {
     }
 });
 
-registerBlockType('alecaddd/custom-cta3', {
-    title: 'Call to Action 3',
+registerBlockType('alecaddd/custom-titre-style2', {
+    title: 'Titre - Style 2',
+    description: 'Block pour créer titre de la page',
+    icon: 'format-image',
+    category: 'layout',
+
+    // custom attributes
+    attributes: {
+        title: {
+            type: 'string',
+            source: 'html',
+            selector: 'h1'
+        },
+        titleColor: {
+            type: 'string',
+            default: '#C69C6C'
+        },
+        subtitle: {
+            type: 'string',
+            source: 'html',
+            selector: 'p'
+        }
+    },
+
+    edit({ attributes, setAttributes }) {
+        const {
+            title,
+            subtitle,
+            titleColor
+        } = attributes;
+
+        // custom functions
+        function onChangeTitle(newTitle) {
+            setAttributes( { title: newTitle } )
+        }
+
+        function onChangeSubtitle(newSubtitle) {
+            setAttributes( { subtitle: newSubtitle } )
+        }
+
+        function onTitleColorChange(newColor) {
+            setAttributes( { titleColor: newColor } )
+        }
+
+
+        return ([
+            <InspectorControls style={ { marginBottom: '40px' } }>
+                <PanelBody title={ 'Title color' }>
+                    <p><strong>Select title color:</strong></p>
+                    <ColorPalette value={ titleColor }
+                                  onChange={ onTitleColorChange } />
+                </PanelBody>
+            </InspectorControls>,
+            <div class="titre-h1-style2">
+                <RichText key="editable"
+                          tagName="h2"
+                          placeholder="Votre titre"
+                          value={ title }
+                          onChange={ onChangeTitle }
+                          style={ { color: titleColor } } />
+                <RichText key="editable"
+                          tagName="p"
+                          placeholder="Votre sous-titre"
+                          value={ subtitle }
+                          onChange={ onChangeSubtitle } />
+            </div>
+
+        ]);
+        
+    },
+
+    save({ attributes }) {
+        const {
+            title,
+            subtitle,
+            titleColor
+        } = attributes;
+
+        return (
+            <div class="titre-h1-style2">
+                <h2 style={ { color: titleColor } }>{ title }</h2>
+                <RichText.Content tagName="p" 
+                                  value={ subtitle } />
+            </div>
+        );
+
+    }
+});
+
+registerBlockType('alecaddd/custom-cta4', {
+    title: 'Call to Action 4',
     description: 'Block to generate a custom Call to Action',
     icon: 'format-image',
     category: 'layout',
@@ -66,38 +163,118 @@ registerBlockType('alecaddd/custom-cta3', {
             source: 'html',
             selector: 'h2'
         },
+        titleColor: {
+            type: 'string',
+            default: 'black'
+        },
         body: {
             type: 'string',
             source: 'html',
             selector: 'p'
+        },
+        backgroundImage: {
+            type: 'string',
+            default: null
+        },
+        overlayColor: {
+            type: 'string',
+            default: 'black'
+        },
+        overlayOpacity:{
+            type: 'number',
+            default: 0.3
         }
     },
 
     edit({ attributes, setAttributes }) {
         const {
             title,
-            body
+            body,
+            titleColor,
+            backgroundImage,
+            overlayColor,
+            overlayOpacity
         } = attributes;
 
         // custom functions
         function onChangeTitle(newTitle) {
-            //console.log(event.target.value);
-            setAttributes( { title: newTitle } )
+            setAttributes( { title: newTitle } );
         }
 
         function onChangeBody(newBody) {
-            //console.log(event.target.value);
-            setAttributes( { body: newBody } )
+            setAttributes( { body: newBody } );
+        }
+
+        function onTitleColorChange(newColor) {
+            setAttributes( { titleColor: newColor } );
+        }
+
+        function onSelectImage(newImage) {
+            console.log(newImage);
+            setAttributes( { backgroundImage: newImage.sizes.full.url } );
+        }
+
+        function onOverlayColor(newColor) {
+            console.log(newColor);
+            setAttributes( { overlayColor: newColor } );
+        }
+
+        function onOverlayOpacity(newOpacity) {
+            console.log(newOpacity);
+            setAttributes( { overlayOpacity: newOpacity } );
         }
 
 
         return ([
-            <div class="cta-container">
+            <InspectorControls style={ { marginBottom: '40px' } }>
+                <PanelBody title={ 'Title color' }>
+                    <p><strong>Select title color:</strong></p>
+                    <ColorPalette value={ titleColor }
+                                  onChange={ onTitleColorChange } />
+                </PanelBody>
+                <PanelBody title={ 'Background image settings'}>
+                    <p><strong>Select a Background Image</strong></p>
+                    <MediaUpload
+                        onSelect={ onSelectImage }
+                        //allowedTypes={ ['image'] }
+                        type='image'
+                        value={ backgroundImage }
+                        multiple='true'
+                        render={ ( { open } ) => (
+							<Button
+								className="editor-media-placeholder__button is-button is-default is-large"
+								icon="upload"
+								onClick={ open }>
+								 Background Image
+							</Button>
+						)}/>
+                    <div style={{marginTop: '20px', marginBottom: '40px'}}>
+                        <p>Overlay color:</p>
+                        <ColorPalette value={ overlayColor }
+                                  onChange={ onOverlayColor } />
+                    </div>
+                    <RangeControl 
+                        label={ 'Overlay opacity'}
+                        value={ overlayOpacity }
+                        onChange={ onOverlayOpacity }
+                        min={ 0 }
+                        max={ 1 }
+                        step= { 0.05 } /> 
+                </PanelBody>
+            </InspectorControls>,
+            <div className="cta-container" style={{
+                backgroundImage: `url(${backgroundImage})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+            }}>
+            <div className="cta-overlay" style={ {background:overlayColor, opacity:overlayOpacity}}></div>
                 <RichText key="editable"
                           tagName="h2"
                           placeholder="Your Title"
                           value={ title }
-                          onChange={ onChangeTitle } />
+                          onChange={ onChangeTitle }
+                          style={ { color: titleColor } } />
                 <RichText key="editable"
                           tagName="p"
                           placeholder="Your body"
@@ -112,12 +289,22 @@ registerBlockType('alecaddd/custom-cta3', {
     save({ attributes }) {
         const {
             title,
-            body
+            body,
+            titleColor,
+            backgroundImage,
+            overlayColor,
+            overlayOpacity
         } = attributes;
 
         return (
-            <div class="cta-container">
-                <h2>{ title }</h2>
+            <div className="cta-container" style={{
+                backgroundImage: `url(${backgroundImage})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+            }}>
+            <div className="cta-overlay" style={ {background:overlayColor, opacity:overlayOpacity}}></div>
+                <h2 style={ { color: titleColor } }>{ title }</h2>
                 <RichText.Content tagName="p" 
                                   value={ body } />
             </div>

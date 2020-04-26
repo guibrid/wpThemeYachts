@@ -99,7 +99,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 
 var registerBlockType = wp.blocks.registerBlockType;
-var RichText = wp.blockEditor.RichText;
+var _wp$blockEditor = wp.blockEditor,
+    RichText = _wp$blockEditor.RichText,
+    InspectorControls = _wp$blockEditor.InspectorControls,
+    ColorPalette = _wp$blockEditor.ColorPalette,
+    MediaUpload = _wp$blockEditor.MediaUpload;
+var _wp$components = wp.components,
+    PanelBody = _wp$components.PanelBody,
+    Button = _wp$components.Button,
+    RangeControl = _wp$components.RangeControl;
 registerBlockType('alecaddd/custom-cta', {
   title: 'Call to Action',
   description: 'Block to generate a custom Call to Action',
@@ -147,8 +155,100 @@ registerBlockType('alecaddd/custom-cta2', {
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "Title is : ", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("i", null, attributes.title));
   }
 });
-registerBlockType('alecaddd/custom-cta3', {
-  title: 'Call to Action 3',
+registerBlockType('alecaddd/custom-titre-style2', {
+  title: 'Titre - Style 2',
+  description: 'Block pour créer titre de la page',
+  icon: 'format-image',
+  category: 'layout',
+  // custom attributes
+  attributes: {
+    title: {
+      type: 'string',
+      source: 'html',
+      selector: 'h1'
+    },
+    titleColor: {
+      type: 'string',
+      default: '#C69C6C'
+    },
+    subtitle: {
+      type: 'string',
+      source: 'html',
+      selector: 'p'
+    }
+  },
+  edit: function edit(_ref3) {
+    var attributes = _ref3.attributes,
+        setAttributes = _ref3.setAttributes;
+    var title = attributes.title,
+        subtitle = attributes.subtitle,
+        titleColor = attributes.titleColor; // custom functions
+
+    function onChangeTitle(newTitle) {
+      setAttributes({
+        title: newTitle
+      });
+    }
+
+    function onChangeSubtitle(newSubtitle) {
+      setAttributes({
+        subtitle: newSubtitle
+      });
+    }
+
+    function onTitleColorChange(newColor) {
+      setAttributes({
+        titleColor: newColor
+      });
+    }
+
+    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(InspectorControls, {
+      style: {
+        marginBottom: '40px'
+      }
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(PanelBody, {
+      title: 'Title color'
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("strong", null, "Select title color:")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(ColorPalette, {
+      value: titleColor,
+      onChange: onTitleColorChange
+    }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "titre-h1-style2"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      key: "editable",
+      tagName: "h2",
+      placeholder: "Votre titre",
+      value: title,
+      onChange: onChangeTitle,
+      style: {
+        color: titleColor
+      }
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      key: "editable",
+      tagName: "p",
+      placeholder: "Votre sous-titre",
+      value: subtitle,
+      onChange: onChangeSubtitle
+    }))];
+  },
+  save: function save(_ref4) {
+    var attributes = _ref4.attributes;
+    var title = attributes.title,
+        subtitle = attributes.subtitle,
+        titleColor = attributes.titleColor;
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "titre-h1-style2"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h2", {
+      style: {
+        color: titleColor
+      }
+    }, title), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      tagName: "p",
+      value: subtitle
+    }));
+  }
+});
+registerBlockType('alecaddd/custom-cta4', {
+  title: 'Call to Action 4',
   description: 'Block to generate a custom Call to Action',
   icon: 'format-image',
   category: 'layout',
@@ -159,40 +259,140 @@ registerBlockType('alecaddd/custom-cta3', {
       source: 'html',
       selector: 'h2'
     },
+    titleColor: {
+      type: 'string',
+      default: 'black'
+    },
     body: {
       type: 'string',
       source: 'html',
       selector: 'p'
+    },
+    backgroundImage: {
+      type: 'string',
+      default: null
+    },
+    overlayColor: {
+      type: 'string',
+      default: 'black'
+    },
+    overlayOpacity: {
+      type: 'number',
+      default: 0.3
     }
   },
-  edit: function edit(_ref3) {
-    var attributes = _ref3.attributes,
-        setAttributes = _ref3.setAttributes;
+  edit: function edit(_ref5) {
+    var attributes = _ref5.attributes,
+        setAttributes = _ref5.setAttributes;
     var title = attributes.title,
-        body = attributes.body; // custom functions
+        body = attributes.body,
+        titleColor = attributes.titleColor,
+        backgroundImage = attributes.backgroundImage,
+        overlayColor = attributes.overlayColor,
+        overlayOpacity = attributes.overlayOpacity; // custom functions
 
     function onChangeTitle(newTitle) {
-      //console.log(event.target.value);
       setAttributes({
         title: newTitle
       });
     }
 
     function onChangeBody(newBody) {
-      //console.log(event.target.value);
       setAttributes({
         body: newBody
       });
     }
 
-    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-      class: "cta-container"
-    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+    function onTitleColorChange(newColor) {
+      setAttributes({
+        titleColor: newColor
+      });
+    }
+
+    function onSelectImage(newImage) {
+      console.log(newImage);
+      setAttributes({
+        backgroundImage: newImage.sizes.full.url
+      });
+    }
+
+    function onOverlayColor(newColor) {
+      console.log(newColor);
+      setAttributes({
+        overlayColor: newColor
+      });
+    }
+
+    function onOverlayOpacity(newOpacity) {
+      console.log(newOpacity);
+      setAttributes({
+        overlayOpacity: newOpacity
+      });
+    }
+
+    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(InspectorControls, {
+      style: {
+        marginBottom: '40px'
+      }
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(PanelBody, {
+      title: 'Title color'
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("strong", null, "Select title color:")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(ColorPalette, {
+      value: titleColor,
+      onChange: onTitleColorChange
+    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(PanelBody, {
+      title: 'Background image settings'
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("strong", null, "Select a Background Image")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaUpload, {
+      onSelect: onSelectImage //allowedTypes={ ['image'] }
+      ,
+      type: "image",
+      value: backgroundImage,
+      multiple: "true",
+      render: function render(_ref6) {
+        var open = _ref6.open;
+        return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Button, {
+          className: "editor-media-placeholder__button is-button is-default is-large",
+          icon: "upload",
+          onClick: open
+        }, "Background Image");
+      }
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      style: {
+        marginTop: '20px',
+        marginBottom: '40px'
+      }
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "Overlay color:"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(ColorPalette, {
+      value: overlayColor,
+      onChange: onOverlayColor
+    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RangeControl, {
+      label: 'Overlay opacity',
+      value: overlayOpacity,
+      onChange: onOverlayOpacity,
+      min: 0,
+      max: 1,
+      step: 0.05
+    }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "cta-container",
+      style: {
+        backgroundImage: "url(".concat(backgroundImage, ")"),
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "cta-overlay",
+      style: {
+        background: overlayColor,
+        opacity: overlayOpacity
+      }
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
       key: "editable",
       tagName: "h2",
       placeholder: "Your Title",
       value: title,
-      onChange: onChangeTitle
+      onChange: onChangeTitle,
+      style: {
+        color: titleColor
+      }
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
       key: "editable",
       tagName: "p",
@@ -201,13 +401,33 @@ registerBlockType('alecaddd/custom-cta3', {
       onChange: onChangeBody
     }))];
   },
-  save: function save(_ref4) {
-    var attributes = _ref4.attributes;
+  save: function save(_ref7) {
+    var attributes = _ref7.attributes;
     var title = attributes.title,
-        body = attributes.body;
+        body = attributes.body,
+        titleColor = attributes.titleColor,
+        backgroundImage = attributes.backgroundImage,
+        overlayColor = attributes.overlayColor,
+        overlayOpacity = attributes.overlayOpacity;
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-      class: "cta-container"
-    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h2", null, title), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      className: "cta-container",
+      style: {
+        backgroundImage: "url(".concat(backgroundImage, ")"),
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "cta-overlay",
+      style: {
+        background: overlayColor,
+        opacity: overlayOpacity
+      }
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h2", {
+      style: {
+        color: titleColor
+      }
+    }, title), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
       tagName: "p",
       value: body
     }));
