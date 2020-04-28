@@ -37,7 +37,7 @@ get_header();
                                 <h2>'.get_the_title().'</h2>
                                 <p class="excerptActu">'.substr(get_the_excerpt(), 0, 350).'...</p>
                                 <p class="dateActu">'.get_the_date( "d.m.Y").'</p>
-                                <div><a href="#" class="customButton blackButton">En savoir plus <i class="fas fa-chevron-right fa-xs"></i></a></div>
+                                <div><a href="'.get_permalink().'" class="customButton blackButton">En savoir plus <i class="fas fa-chevron-right fa-xs"></i></a></div>
                             </div>';
 
             if ($i % 2 != 0){

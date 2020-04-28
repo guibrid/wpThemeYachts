@@ -7,6 +7,15 @@
 body {
     font-family: 'Gotham';
 }
+.single-content a, p.has-text-color a{
+    transition: 0.3s;
+    text-decoration: none;
+    color: #8c5c26;
+}
+
+.single-content a:hover, p.has-text-color a:hover{
+    color: #c69c6c;
+}
 
 /** HEADER **/
 header#masthead {
@@ -237,6 +246,33 @@ div.actu-page .actu-cover {
     height: 100px;
     border-radius: 10px;
     margin-bottom: 15px;
+}
+div.actu-page .actu-content-single h2 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+}
+div.actu-page .actu-content-single span.line {
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background-color: #c1996a;
+}
+
+div.actu-page .actu-cover-single {
+    background-position:center;
+    background-repeat: none;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+div.actu-page .dateActuSingle {
+    font-size: 10px;
+    text-align: center;
+    margin: 5px 0 30px 0;
 }
 
 @media (min-width: 576px) {
