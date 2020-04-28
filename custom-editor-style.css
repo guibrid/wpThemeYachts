@@ -1,39 +1,28 @@
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
-}
-
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
-}
-
-.aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-
 .cta-container {
     position: relative;
+}
 
+.cta-container * {
+    z-index: 3;
+    position: relative;
 }
 
 .cta-overlay {
     position: absolute;
     inset: 0px;
     z-index: 2;
-
 }
 
-.cta-container h2, .cta-container p {
-    z-index: 3;
-    position: relative;
+.titre-h1-style2 {
+    text-align: center;
+}
+.titre-h1-style2 h2  {
+    font-size: 32px !important;
+    margin: 0 !important;
+    font-weight: bolder !important;
+}
+.titre-h1-style2 p  {
+    margin: 0 !important;
+    font-size: 18px !important;
+    font-weight: bolder !important;
 }

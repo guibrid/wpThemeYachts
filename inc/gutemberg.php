@@ -61,6 +61,10 @@ function alecaddd_gutenberg_blocks()
         'editor_script' => 'custom-cta-js'
     ) );
 
+    register_block_type( 'alecaddd/custom-galery', array(
+        'editor_script' => 'custom-cta-js'
+    ) );
+
     register_block_type( 'alecaddd/custom-cta4', array(
         'editor_script' => 'custom-cta-js'
     ) );

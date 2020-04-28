@@ -35,15 +35,15 @@ Text Domain: yatchslyon
 /* TO DELETE AFTER Gutenberg tuto finish*/
 .cta-container {
     position: relative;
-
 }
+
+.cta-container * {
+    z-index: 3;
+    position: relative;
+}
+
 .cta-overlay {
     position: absolute;
     inset: 0px;
     z-index: 2;
-}
-
-.cta-container h2, .cta-container p {
-    z-index: 3;
-    position: relative;
 }

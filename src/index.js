@@ -2,31 +2,85 @@ const { registerBlockType } = wp.blocks;
 const { RichText,
         InspectorControls,
         ColorPalette,
-        MediaUpload
+        MediaUpload,
+        InnerBlocks,
+        BlockControls, 
+        AlignmentToolbar
 } = wp.blockEditor;
 const { PanelBody,
         Button,
         RangeControl
  } = wp.components
+ const ALLOWED_BLOCKS = ['core/button'];
 
 registerBlockType('alecaddd/custom-cta', {
-    title: 'Call to Action',
+    title: 'Call to aLign',
     description: 'Block to generate a custom Call to Action',
     icon: 'format-image',
     category: 'layout',
 
     // custom attributes
-    attributes: {},
+    attributes: {
+        content: {
+            type: 'array',
+            source: 'children',
+            selector: 'p',
+            default: 'Block content can be aligned with toolbar.',
+        },
+        alignment: {
+            type: 'string',
+            default:'center'
+        },
+    },
 
     // custom functions
 
-    edit() {
+    edit: ({attributes, setAttributes, focus}) => {
 
-        return <div>Hello World</div>
+        const {
+            content,
+            alignment,
+        } = attributes;
+
+        function onChangeContent( updatedContent ) {
+            setAttributes( { content: updatedContent } );
+        }
+
+        function onChangeAlignment( updatedAlignment ) {
+            setAttributes( { alignment: updatedAlignment } );
+        }
+
+        return ([
+            <div>
+            <BlockControls>
+            <AlignmentToolbar
+                value={ alignment }
+                onChange={onChangeAlignment}
+            />
+			</BlockControls>
+            <RichText key="editable"
+                      tagName="p"
+                      value={ content }
+                      style= { {textAlign: alignment} }
+                      onChange={ onChangeContent }
+                      onFocus= {focus} />
+            </div>				
+        ]);
         
     },
 
-    save() {}
+    save: ({ attributes, setAttributes }) => {
+        const {
+            content,
+            alignment,
+        } = attributes;
+
+        return (
+            <div>
+            <p style= { {textAlign: alignment} }>{ content }</p>
+            </div>
+        );
+    }
 });
 
 registerBlockType('alecaddd/custom-cta2', {
@@ -42,7 +96,7 @@ registerBlockType('alecaddd/custom-cta2', {
         }
     },
 
-    edit({ attributes, setAttributes }) {
+    edit: ({ attributes, setAttributes }) => {
         // custom functions
         function updateTitle(event) {
             //console.log(event.target.value);
@@ -54,12 +108,19 @@ registerBlockType('alecaddd/custom-cta2', {
         
     },
 
-    save({ attributes }) {
+    save: ({ attributes }) => {
 
         return <p>Title is : <i>{ attributes.title }</i></p>
 
     }
 });
+
+
+
+
+/*****
+TITRE STYLE 2
+*/
 
 registerBlockType('alecaddd/custom-titre-style2', {
     title: 'Titre - Style 2',
@@ -85,7 +146,7 @@ registerBlockType('alecaddd/custom-titre-style2', {
         }
     },
 
-    edit({ attributes, setAttributes }) {
+    edit: ({ attributes, setAttributes }) => {
         const {
             title,
             subtitle,
@@ -114,7 +175,7 @@ registerBlockType('alecaddd/custom-titre-style2', {
                                   onChange={ onTitleColorChange } />
                 </PanelBody>
             </InspectorControls>,
-            <div class="titre-h1-style2">
+            <div className="titre-h1-style2">
                 <RichText key="editable"
                           tagName="h2"
                           placeholder="Votre titre"
@@ -132,7 +193,7 @@ registerBlockType('alecaddd/custom-titre-style2', {
         
     },
 
-    save({ attributes }) {
+    save: ({ attributes }) => {
         const {
             title,
             subtitle,
@@ -140,7 +201,7 @@ registerBlockType('alecaddd/custom-titre-style2', {
         } = attributes;
 
         return (
-            <div class="titre-h1-style2">
+            <div className="titre-h1-style2">
                 <h2 style={ { color: titleColor } }>{ title }</h2>
                 <RichText.Content tagName="p" 
                                   value={ subtitle } />
@@ -149,6 +210,10 @@ registerBlockType('alecaddd/custom-titre-style2', {
 
     }
 });
+
+/*****
+TITRE STYLE 2 END
+*/
 
 registerBlockType('alecaddd/custom-cta4', {
     title: 'Call to Action 4',
@@ -193,7 +258,7 @@ registerBlockType('alecaddd/custom-cta4', {
         }
     },
 
-    edit({ attributes, setAttributes }) {
+    edit: ({ attributes, setAttributes }) => {
         const {
             align,
             title,
@@ -288,13 +353,16 @@ registerBlockType('alecaddd/custom-cta4', {
                           placeholder="Your body"
                           value={ body }
                           onChange={ onChangeBody } />
+                <InnerBlocks 
+                    allowedBlocks={ ALLOWED_BLOCKS}
+                    className="monBoutton" />
             </div>
 
         ]);
         
     },
 
-    save({ attributes }) {
+    save: ({ attributes }) => {
         const {
             align,
             title,
@@ -311,13 +379,106 @@ registerBlockType('alecaddd/custom-cta4', {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
+                textAlign: align
             }}>
             <div className="cta-overlay" style={ {background:overlayColor, opacity:overlayOpacity}}></div>
                 <h2 style={ { color: titleColor } }>{ title }</h2>
                 <RichText.Content tagName="p" 
                                   value={ body }/>
+                <InnerBlocks.Content
+                    className="monBoutton" />
             </div>
         );
+
+    }
+});
+
+/*
+* GALERY BLOCK
+*/
+registerBlockType('alecaddd/custom-galery', {
+    title: 'Custom Galery slider',
+    description: 'Block to generate a custom Call to Action',
+    icon: 'format-image',
+    category: 'layout',
+
+    // custom attributes
+    attributes: {
+        images: {
+            type: 'array',
+        }
+    },
+
+    edit: ({ attributes, setAttributes }) => {
+
+        const {
+            images,
+        } = attributes;
+
+        // custom functions
+        function onSelectImage(newImage) {
+            console.log(newImage);
+            setAttributes( { images: newImage } );
+        }
+
+
+        return ([
+            
+                <InspectorControls style={ { marginBottom: '40px' } }>
+                    <PanelBody title={ 'Background image settings'}>
+                        <p><strong>Sélectionnez vos images</strong></p>
+                        <MediaUpload
+                            onSelect={ onSelectImage }
+                            type="image"
+                            multiple="true"
+                            value={ images }
+                            render={ ( { open } ) => (
+                                <Button
+                                    className="editor-media-placeholder__button is-button is-default is-large"
+                                    icon="upload"
+                                    onClick={ open }>
+                                     Background Image
+                                </Button>
+                            )}/>
+                    </PanelBody>
+                </InspectorControls>,
+                
+                <div>toto
+                    {console.log(images)}
+                  
+                    { images !== undefined ? (
+                            images.map(img => {
+                                return <img src={img.sizes.full.url} />;
+                            })
+
+                        ) : (
+                            console.log('tota')
+                        ) 
+                    }
+                </div>
+        ])
+        
+    },
+
+    save: ({ attributes }) => {
+        const {
+            images,
+        } = attributes;
+
+        return(
+            
+            <div>toto
+                {console.log(images)}
+                { images !== undefined ? (
+                            images.map(img => {
+                                return <img src={img.sizes.full.url} />;
+                            })
+                        ) : (
+                            console.log('tota')
+                        ) 
+                }
+            </div>
+        )
 
     }
 });

@@ -388,3 +388,22 @@ footer#colophon div.social a:hover {
     color: #ffffff;
     text-decoration: none;
 }
+
+
+/* Gutenberg Custom Blocks */
+
+/*Title style 2*/
+.titre-h1-style2 {
+    text-align: center;
+    margin: 35px auto;
+}
+.titre-h1-style2 h2  {
+    font-size: 32px;
+    margin: 0;
+    font-weight: bolder;
+}
+.titre-h1-style2 p  {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bolder;
+}
