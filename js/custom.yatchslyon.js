@@ -22,7 +22,8 @@ if($(window).width() >= 992) {
     $(".carousel-inner .imgBlock").height(sliderHeight);
 }
 
-
+/* Css pour le menu parent du submenu actif */
+$("a.dropdown-item").parents( "li.current-menu-parent" ).find("a.dropdown-toggle").css({"font-weight": "bold", "color": "#c69c6c"});
 
   /*
   https://github.com/kenwheeler/slick/issues/248

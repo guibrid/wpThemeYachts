@@ -181,3 +181,13 @@ function yatchs_add_gutenberg_assets() {
 	wp_enqueue_style( 'yatchs-gutenberg', get_theme_file_uri( 'custom-editor-style.css' ), false );
 }
 
+/**
+ * Register Custom Navigation Walker
+ */
+function register_navwalker(){
+	require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
+
+
+

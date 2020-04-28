@@ -8,11 +8,25 @@
     <div class="col-6 col-md-9">
 
         <!-- site-navigation Desktop -->
-        <nav id="site-navigation" class="main-navigation">
+        <?php
+          wp_nav_menu( array(
+              'theme_location'  => 'menu-1',
+              'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
+              'container'       => 'nav',
+              'container_class' => 'main-navigation',
+              'container_id'    => 'site-navigation',
+              'menu_class'      => 'd-flex',
+              'walker'          => new WP_Bootstrap_Navwalker(),
+          ) );
+        ?>
+
+
+        <!--<nav id="site-navigation" class="main-navigation">
+
             <ul class="d-flex">
-            <li class="p-2 flex-fill text-center"><a href="#">Les bateaux</a></li>
-            <li class="p-2 flex-fill text-center dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-exp>
+            <li class="p-2 flex-fill"><a href="#">Les bateaux</a></li>
+            <li class="p-2 flex-fill dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" >
                     Nos préstations
                     <ul class="dropdown-menu">
                         <li class="dropdown-item" href="#">one</li>
@@ -24,7 +38,7 @@
             <li class="p-2 flex-fill "><a href="#">Evènements<br />éphémères</a></li>
             <li class="p-2 flex-fill "><a href="#">FR</a></li>
             </ul>
-        </nav>
+        </nav>-->
         
         <!-- site-navigation Mobile -->
         <nav class="mobile-navigation text-right">  

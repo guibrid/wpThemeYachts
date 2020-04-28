@@ -38,7 +38,10 @@ nav#site-navigation ul {
     margin: 5px 0 0 0;
     padding: 0;
     list-style: none;
+    text-align: right;
 }
+
+
 
 nav#site-navigation li {
     margin: 0;
@@ -51,6 +54,11 @@ nav#site-navigation li a {
     transition: 0.3s;
     font-size: 14px ;
 }
+
+nav#site-navigation li.current_page_item a {
+    color:#c69c6c;
+    font-weight: bold;
+} 
 
 nav#site-navigation li a:hover {
     color:#c69c6c;
