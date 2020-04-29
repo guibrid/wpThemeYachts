@@ -41,7 +41,7 @@ function custom_tax_cpt() {
 	
 	// slider taxonomy and CPT end
 
-	// Evenement taxonomy and CPT end
+	// Evenement taxonomy and CPT
 
 	$labels_event = [
 		'name'				 => __( 'Evènements' ),
@@ -54,7 +54,7 @@ function custom_tax_cpt() {
 		'view_item'          => __( 'Voir évènement'),
 		'search_items'       => __( 'Rechercher évènements'),
 		'not_found'          =>  __( 'Aucun évènement trouvé'),
-		'not_found_in_trash' => __( 'Aucun slévènementider trouvé dans la corbeille'), 
+		'not_found_in_trash' => __( 'Aucun évènement trouvé dans la corbeille'), 
 		'parent_item_colon'  => '',
 		'menu_name'          => __( 'Evènement')
 	];
@@ -76,5 +76,43 @@ function custom_tax_cpt() {
 	];
 
 	register_post_type( 'yatchsevenement', $args_event ); // register CP
+
+	// Evenement taxonomy and CPT end
+	
+	// Bateaux taxonomy and CPT
+
+	$labels_bateau = [
+		'name'				 => __( 'Bateaux' ),
+		'singular_name' 	 => __( 'Bateau' ),
+		'add_new'            => __( 'Ajouter nouveau'),
+		'add_new_item'       => __( 'Nouveau bateau'),
+		'edit_item'          => __( 'Editer bateau'),
+		'new_item'           => __( 'Nouveau bateau'),
+		'all_items'          => __( 'Tous les bateaux'),
+		'view_item'          => __( 'Voir bateau'),
+		'search_items'       => __( 'Rechercher bateaux'),
+		'not_found'          =>  __( 'Aucun bateau trouvé'),
+		'not_found_in_trash' => __( 'Aucun bateau trouvé dans la corbeille'), 
+		'parent_item_colon'  => '',
+		'menu_name'          => __( 'Bateau')
+	];
+
+	$args_bateau = [
+		'labels'             => $labels_bateau,
+		'public' 			 => true,
+		'has_archive' 		 => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true, 
+		'show_in_menu'       => true, 
+		'query_var'          => true,
+		'has_archive'        => true,
+		'rewrite' 			 => array('slug' => 'bateaux'),
+		'menu_position'      => 4,
+		'menu_icon'			 => 'dashicons-sos',
+		'show_in_rest'       => true, // to activate gutenberg
+		'supports' => array( 'title', 'custom-fields', 'thumbnail', 'excerpt' ),
+	];
+
+	register_post_type( 'bateaux', $args_bateau ); // register CP
 }
 add_action( 'init', 'custom_tax_cpt' );
