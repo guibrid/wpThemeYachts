@@ -358,6 +358,7 @@ div.evenements-page .duree, div.evenements-page .boarding {
 /** Evènement single page **/
 div.eventHeader{
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 div.eventHeader h2 {
