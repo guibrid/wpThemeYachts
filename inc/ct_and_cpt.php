@@ -71,7 +71,8 @@ function custom_tax_cpt() {
 		'rewrite' 			 => array('slug' => 'evenements'),
 		'menu_position'      => 4,
 		'menu_icon'			 => 'dashicons-calendar-alt',
-		'supports' => array( 'title', 'custom-fields', 'thumbnail', 'excerpt' ),
+		'show_in_rest'       => true, // to activate gutenberg
+		'supports' => array( 'title', 'custom-fields', 'thumbnail', 'excerpt', 'editor' ),
 	];
 
 	register_post_type( 'yatchsevenement', $args_event ); // register CP

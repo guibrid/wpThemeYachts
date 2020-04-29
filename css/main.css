@@ -327,7 +327,7 @@ div.evenements-page div.evenement .eventDetails {
     margin-top: -30px;
 }
 
-div.evenements-page div.evenement .boatName {
+div.evenements-page .boatName {
     background-color: black;
     color: #c1996a;
     display: inline-block;
@@ -335,25 +335,41 @@ div.evenements-page div.evenement .boatName {
     font-weight: bold;
 }
 
-div.evenements-page div.evenement .eventName {
+div.evenements-page .eventName {
     font-size: 13px;
     margin: 5px auto 0 auto;
     text-transform: uppercase;
 }
 
-div.evenements-page div.evenement .prix {
+div.evenements-page .prix {
     font-size: 20px;
     font-weight: bolder;
 }
 
-div.evenements-page div.evenement .prix sup {
+div.evenements-page .prix sup {
     font-size: 12px;
 }
 
-div.evenements-page div.evenement .duree, div.evenements-page div.evenement .boarding {
+div.evenements-page .duree, div.evenements-page .boarding {
     font-size: 10px;
 }
 
+
+/** Evènement single page **/
+div.eventHeader{
+    margin-top: 30px;
+}
+
+div.eventHeader h2 {
+    font-size: 30px;
+    color: #C69C6C;
+    font-weight: bolder;
+}
+
+div#eventCarousel {
+    border: 10px solid #000000;
+    margin-bottom: 30px;
+}
 /** SUB FOOTER **/
 div#sub-footer {
     background-color: #000000;

@@ -1,10 +1,15 @@
-<?php 
-
-/* Template Name: Evènement page */ 
+<?php
+/**
+ * The template for displaying archive pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package yatchslyon
+ */
 
 get_header();
-
 ?>
+
 <div id="primary" class="content-area evenements-page">
 	<main id="main" class="site-main">
 
@@ -64,6 +69,6 @@ get_header();
     </main><!-- #main -->
 </div><!-- #primary -->
 
-<?php
 
+<?php
 get_footer();

@@ -10,7 +10,7 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 } 
 
-/* Init Home page slider */
+/* Init Home page, event and prestations slider */
 $('.carousel').carousel();
 
 /* Init Animation on Scrool */
