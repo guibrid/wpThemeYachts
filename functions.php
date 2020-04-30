@@ -51,6 +51,7 @@ if ( ! function_exists( 'yatchslyon_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'yatchslyon' ),
+				'menu-2' => esc_html__( 'Mobile', 'yatchslyon' ),
 			)
 		);
 

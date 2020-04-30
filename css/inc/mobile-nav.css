@@ -24,30 +24,55 @@
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
+
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+      position: absolute;
+      color: #ffffff !important;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+      text-decoration: none;
+    }
   
   /* The navigation menu links */
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
+  .sidenav #menu-mobile {
+    margin: 0 20px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sidenav #menu-mobile li {
+    margin: 0 0 15px 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sidenav #menu-mobile li li {
+    margin-bottom: 5PX;
+  }
+
+  .sidenav #menu-mobile a {
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    font-size: 20px;
     display: block;
     transition: 0.3s;
   }
+
+  .sidenav #menu-mobile ul.sub-menu a {
+    font-size: 15px;
+  }
   
   /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: #f1f1f1;
+  .sidenav #menu-mobile a{
+    color: #ffffff;
+  }
+  .sidenav #menu-mobile a:hover {
+    color: #c69c6c;
   }
   
-  /* Position and style the close button (top right corner) */
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
+
   
   
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
