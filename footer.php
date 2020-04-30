@@ -19,7 +19,7 @@
 			<div class="row">
 				<div class="col-lg-6 text-lg-left contact" data-aos="zoom-in">
 					<span>Nous contacter</span><br />
-					<a href="#" class="customButton whiteButton">Un devis ? <i class="fas fa-chevron-right fa-xs"></i></a>
+					<a href="<?php echo get_home_url(); ?>/contact/" class="customButton whiteButton">Un devis ? <i class="fas fa-chevron-right fa-xs"></i></a>
 				</div>
 				<div class="col-lg-6 text-lg-left newsletter"  data-aos="zoom-in">
 					<span>Newsletter</span><br />

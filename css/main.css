@@ -48,6 +48,8 @@ nav#site-navigation li {
     padding: 0;
 }
 
+
+
 nav#site-navigation li a {
     color: #e1e1e1;
     text-decoration: none;
@@ -66,11 +68,23 @@ nav#site-navigation li a:hover {
 
 nav#site-navigation ul.dropdown-menu {
     background-color: #000000;
+    margin: 0;
 }
+
+nav#site-navigation li.bateauMenu .dropdown-item {
+    padding-left: 50px;
+    transition: 0.3s;
+}
+
+nav#site-navigation li.bateauMenu .dropdown-item:hover {
+    background: url('../img/icon-bateau-volupte.png') no-repeat left center;
+}
+
 nav#site-navigation .dropdown-item {
     background-color: #000000;
     color: #ffffff;
     font-size: 12px;
+    text-align: left;
 }
 nav#site-navigation .dropdown-item:focus, nav#site-navigation .dropdown-item:hover {
     background-color: #000000;
