@@ -112,6 +112,73 @@ var _wp$components = wp.components,
     Button = _wp$components.Button,
     RangeControl = _wp$components.RangeControl;
 var ALLOWED_BLOCKS = ['core/button'];
+/* Bateaux Infos Block */
+
+registerBlockType('alecaddd/bateau-infos-bloc', {
+  title: 'Bateau Infos Bloc',
+  description: 'Bloc dinformation sur un bateau.',
+  icon: 'format-image',
+  category: 'layout',
+  // custom attributes
+  attributes: {
+    title: {
+      type: 'string'
+    },
+    content: {
+      type: 'string'
+    }
+  },
+  edit: function edit(_ref) {
+    var attributes = _ref.attributes,
+        setAttributes = _ref.setAttributes;
+    var title = attributes.title,
+        content = attributes.content; // custom functions
+
+    function updateTitle(newTitle) {
+      setAttributes({
+        title: newTitle
+      });
+    }
+
+    function updateContent(newContent) {
+      setAttributes({
+        content: newContent
+      });
+    }
+
+    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "boatInfosBloc",
+      "data-aos": "zoom-in"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "title"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      key: "editable",
+      tagName: "h4",
+      value: title,
+      placeholder: "Votre titre",
+      onChange: updateTitle
+    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      key: "editable",
+      tagName: "div",
+      value: content,
+      placeholder: "Votre contenu",
+      onChange: updateContent
+    }))];
+  },
+  save: function save(_ref2) {
+    var attributes = _ref2.attributes;
+    var title = attributes.title,
+        content = attributes.content;
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "boatInfosBloc",
+      "data-aos": "zoom-in"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "title"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h4", null, title)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, content));
+  }
+});
+/* Bateaux Infos Block End */
+
 registerBlockType('alecaddd/custom-cta', {
   title: 'Call to aLign',
   description: 'Block to generate a custom Call to Action',
@@ -131,10 +198,10 @@ registerBlockType('alecaddd/custom-cta', {
     }
   },
   // custom functions
-  edit: function edit(_ref) {
-    var attributes = _ref.attributes,
-        setAttributes = _ref.setAttributes,
-        focus = _ref.focus;
+  edit: function edit(_ref3) {
+    var attributes = _ref3.attributes,
+        setAttributes = _ref3.setAttributes,
+        focus = _ref3.focus;
     var content = attributes.content,
         alignment = attributes.alignment;
 
@@ -164,9 +231,9 @@ registerBlockType('alecaddd/custom-cta', {
       onFocus: focus
     }))];
   },
-  save: function save(_ref2) {
-    var attributes = _ref2.attributes,
-        setAttributes = _ref2.setAttributes;
+  save: function save(_ref4) {
+    var attributes = _ref4.attributes,
+        setAttributes = _ref4.setAttributes;
     var content = attributes.content,
         alignment = attributes.alignment;
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", {
@@ -187,9 +254,9 @@ registerBlockType('alecaddd/custom-cta2', {
       type: 'string'
     }
   },
-  edit: function edit(_ref3) {
-    var attributes = _ref3.attributes,
-        setAttributes = _ref3.setAttributes;
+  edit: function edit(_ref5) {
+    var attributes = _ref5.attributes,
+        setAttributes = _ref5.setAttributes;
 
     // custom functions
     function updateTitle(event) {
@@ -205,8 +272,8 @@ registerBlockType('alecaddd/custom-cta2', {
       type: "text"
     });
   },
-  save: function save(_ref4) {
-    var attributes = _ref4.attributes;
+  save: function save(_ref6) {
+    var attributes = _ref6.attributes;
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "Title is : ", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("i", null, attributes.title));
   }
 });
@@ -236,9 +303,9 @@ registerBlockType('alecaddd/custom-titre-style2', {
       selector: 'p'
     }
   },
-  edit: function edit(_ref5) {
-    var attributes = _ref5.attributes,
-        setAttributes = _ref5.setAttributes;
+  edit: function edit(_ref7) {
+    var attributes = _ref7.attributes,
+        setAttributes = _ref7.setAttributes;
     var title = attributes.title,
         subtitle = attributes.subtitle,
         titleColor = attributes.titleColor; // custom functions
@@ -289,8 +356,8 @@ registerBlockType('alecaddd/custom-titre-style2', {
       onChange: onChangeSubtitle
     }))];
   },
-  save: function save(_ref6) {
-    var attributes = _ref6.attributes;
+  save: function save(_ref8) {
+    var attributes = _ref8.attributes;
     var title = attributes.title,
         subtitle = attributes.subtitle,
         titleColor = attributes.titleColor;
@@ -352,9 +419,9 @@ registerBlockType('alecaddd/custom-cta4', {
       default: 0.3
     }
   },
-  edit: function edit(_ref7) {
-    var attributes = _ref7.attributes,
-        setAttributes = _ref7.setAttributes;
+  edit: function edit(_ref9) {
+    var attributes = _ref9.attributes,
+        setAttributes = _ref9.setAttributes;
     var align = attributes.align,
         title = attributes.title,
         body = attributes.body,
@@ -417,8 +484,8 @@ registerBlockType('alecaddd/custom-cta4', {
       onSelect: onSelectImage,
       type: "image",
       value: backgroundImage,
-      render: function render(_ref8) {
-        var open = _ref8.open;
+      render: function render(_ref10) {
+        var open = _ref10.open;
         return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Button, {
           className: "editor-media-placeholder__button is-button is-default is-large",
           icon: "upload",
@@ -475,8 +542,8 @@ registerBlockType('alecaddd/custom-cta4', {
       className: "monBoutton"
     }))];
   },
-  save: function save(_ref9) {
-    var attributes = _ref9.attributes;
+  save: function save(_ref11) {
+    var attributes = _ref11.attributes;
     var align = attributes.align,
         title = attributes.title,
         body = attributes.body,
@@ -526,9 +593,9 @@ registerBlockType('alecaddd/custom-galery', {
       type: 'array'
     }
   },
-  edit: function edit(_ref10) {
-    var attributes = _ref10.attributes,
-        setAttributes = _ref10.setAttributes;
+  edit: function edit(_ref12) {
+    var attributes = _ref12.attributes,
+        setAttributes = _ref12.setAttributes;
     var images = attributes.images; // custom functions
 
     function onSelectImage(newImage) {
@@ -549,8 +616,8 @@ registerBlockType('alecaddd/custom-galery', {
       type: "image",
       multiple: "true",
       value: images,
-      render: function render(_ref11) {
-        var open = _ref11.open;
+      render: function render(_ref13) {
+        var open = _ref13.open;
         return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Button, {
           className: "editor-media-placeholder__button is-button is-default is-large",
           icon: "upload",
@@ -563,8 +630,8 @@ registerBlockType('alecaddd/custom-galery', {
       });
     }) : console.log('tota'))];
   },
-  save: function save(_ref12) {
-    var attributes = _ref12.attributes;
+  save: function save(_ref14) {
+    var attributes = _ref14.attributes;
     var images = attributes.images;
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, "toto", console.log(images), images !== undefined ? images.map(function (img) {
       return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
