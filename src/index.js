@@ -76,10 +76,11 @@ const { PanelBody,
         return (
             <div className="boatInfosBloc" data-aos="zoom-in">
                 <div className="title">
-                    <h4>{ title }</h4>
+                    <RichText.Content tagName="h4" 
+                        value={ title } />
                 </div>
-                    <div>{ content }</div>
-                
+                    <RichText.Content tagName="div" 
+                        value={ content } />
             </div>
         )
 

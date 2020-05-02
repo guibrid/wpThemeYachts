@@ -174,7 +174,13 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
       "data-aos": "zoom-in"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "title"
-    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h4", null, title)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, content));
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      tagName: "h4",
+      value: title
+    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      tagName: "div",
+      value: content
+    }));
   }
 });
 /* Bateaux Infos Block End */
