@@ -23,7 +23,7 @@
 				</div>
 				<div class="col-lg-6 text-lg-left newsletter"  data-aos="zoom-in">
 					<span>Newsletter</span><br />
-					<input type="text" name="newsletter" /><a href="#" class="customButton whiteButton">S'abonner <i class="fas fa-chevron-right fa-xs"></i></a>
+					<?php echo do_shortcode('[mc4wp_form id="322"]'); ?>
 				</div>
 			</div>
 		</div>
