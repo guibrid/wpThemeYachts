@@ -35,32 +35,7 @@ get_header();
 
                 <!-- Details -->
                 <div class="container boatDetails">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-3 boatBloc" data-aos="zoom-in">
-                            <div class="spec">
-                            <h4 class="presta">Prestations de bord</h4>
-                            <p><?php echo get_field( "bateau_prestations" ); ?></p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 boatBloc" data-aos="zoom-in">
-                            <div class="spec">
-                                <h4 class="capacite">Capacité</h4>
-                                <p><?php echo get_field( "bateau_capacite" ); ?></p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 boatBloc" data-aos="zoom-in">
-                            <div class="spec">
-                                <h4 class="caracteristique">Caractéristique</h4>
-                                <p><?php echo get_field( "bateau_caracteristiques" ); ?></p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 boatBloc" data-aos="zoom-in">
-                            <div class="spec">
-                                <h4 class="dispo">Mise à disposition</h4>
-                                <p><?php echo get_field( "bateau_mise_a_disposition" ); ?></p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php the_content(); ?>
                 </div>
                 <!-- End Details -->
 
@@ -103,6 +78,7 @@ get_header();
                 </div>
                 <!-- End Galerie et video -->
 
+                <?php if ( get_field( "plan_du_bateau" ) || get_field( "bateau_lien_plan" ) ) : ?>
                 <!-- Configuration -->
                 <div class="container configuration">
                     <div class="row">
@@ -116,6 +92,7 @@ get_header();
                     </div>
                 </div>
                 <!-- End Configuration -->
+                <?php endif; ?>
 
             <?php endwhile; // End of the loop. ?>
 		</div><!-- #container -->

@@ -392,11 +392,19 @@ div#eventCarousel {
     margin-bottom: 25px;
 }
 
-.boatInfosBloc {
+.boatDetails {
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+.boatDetails .p-3, .boatDetails .p-2, .boatDetails .p-4, .boatDetails .p-5, .boatDetails .p-6  {
+    height: 100%;
+}
+
+.boatInfosBloc {
     border: 3px solid #c69c6d;
-    padding: 8px 10px;
+    height: 100%;
+    padding: 20px;
 }
 
 .boatInfosBloc .title{

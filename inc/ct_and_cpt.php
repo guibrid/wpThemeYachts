@@ -110,7 +110,7 @@ function custom_tax_cpt() {
 		'menu_position'      => 4,
 		'menu_icon'			 => 'dashicons-sos',
 		'show_in_rest'       => true, // to activate gutenberg
-		'supports' => array( 'title', 'custom-fields', 'thumbnail', 'excerpt' ),
+		'supports' => array( 'title', 'custom-fields', 'thumbnail', 'excerpt', 'editor'  ),
 	];
 
 	register_post_type( 'bateaux', $args_bateau ); // register CP
