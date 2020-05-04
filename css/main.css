@@ -76,9 +76,30 @@ nav#site-navigation li.bateauMenu .dropdown-item {
     transition: 0.3s;
 }
 
-nav#site-navigation li.bateauMenu .dropdown-item:hover {
+nav#site-navigation li.boat-volupte .dropdown-item:hover {
     background: url('../img/icon-bateau-volupte.png') no-repeat left center;
 }
+
+nav#site-navigation li.boat-evasion .dropdown-item:hover {
+    background: url('../img/icon-bateau-evasion.png') no-repeat left center;
+}
+
+nav#site-navigation li.boat-mouche .dropdown-item:hover {
+    background: url('../img/icon-bateau-evasion.png') no-repeat left center;
+}
+
+nav#site-navigation li.boat-officiel .dropdown-item:hover {
+    background: url('../img/icon-bateau-officiel.png') no-repeat left center;
+}
+
+nav#site-navigation li.boat-diabolico .dropdown-item:hover {
+    background: url('../img/icon-bateau-diabolico.png') no-repeat left center;
+}
+
+nav#site-navigation li.boat-vaporetto .dropdown-item:hover {
+    background: url('../img/icon-bateau-vaporetto.png') no-repeat left center;
+}
+
 
 nav#site-navigation .dropdown-item {
     background-color: #000000;
@@ -209,6 +230,10 @@ div#contactForm label {
 
 div#contactForm label {
     display: block;
+}
+
+div#contactForm .infos-rgpd {
+    font-size: 11px;
 }
 
 div#contactForm input[type=text], div#contactForm input[type=email], div#contactForm select, div#contactForm textarea {
