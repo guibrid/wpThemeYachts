@@ -574,7 +574,7 @@ registerBlockType('alecaddd/custom-titre-style2', {
   title: 'Titre - Style 2',
   description: 'Block pour créer titre de la page',
   icon: 'format-image',
-  category: 'layout',
+  category: 'common',
   // custom attributes
   attributes: {
     title: {
@@ -660,6 +660,12 @@ registerBlockType('alecaddd/custom-titre-style2', {
       tagName: "p",
       value: subtitle
     }));
+  },
+  example: {
+    attributes: {
+      title: 'Votre titre',
+      subtitle: 'Votre sous-titre'
+    }
   }
 });
 /*****
