@@ -41,14 +41,10 @@ nav#site-navigation ul {
     text-align: right;
 }
 
-
-
 nav#site-navigation li {
     margin: 0;
     padding: 0;
 }
-
-
 
 nav#site-navigation li a {
     color: #e1e1e1;
@@ -57,7 +53,7 @@ nav#site-navigation li a {
     font-size: 14px ;
 }
 
-nav#site-navigation li.current_page_item a {
+nav#site-navigation li.current_page_item a, nav#site-navigation li.current-menu-item a {
     color:#c69c6c;
     font-weight: bold;
 } 
