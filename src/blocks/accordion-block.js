@@ -1,5 +1,5 @@
 const { registerBlockType } = wp.blocks;
-const { RichText, InspectorControls } = wp.blockEditor;
+const { RichText, InspectorControls, InnerBlocks } = wp.blockEditor;
 const { PanelBody } = wp.components
 
 /* Accordion Block */
@@ -13,22 +13,17 @@ registerBlockType('alecaddd/accordion-block', {
     attributes: {
         id : {
           type: 'string',
-          type: 'accordion1'
         },
         title: {
             type: 'string'
         },
-        content: {
-          type: 'string'
-      },
     },
 
     edit: ({ attributes, setAttributes }) => {
 
         const {
           id,
-          title,
-          content,  
+          title, 
         } = attributes;
 
         // custom functions
@@ -40,11 +35,6 @@ registerBlockType('alecaddd/accordion-block', {
         function updateTitle(newTitle) {
             setAttributes( { title: newTitle } )
         }
-        
-        function updateContent(newContent) {
-            setAttributes( { content: newContent } )
-        }
-
 
         return ([
             <InspectorControls style={ { marginBottom: '40px' } }>
@@ -69,11 +59,7 @@ registerBlockType('alecaddd/accordion-block', {
 
               <div id={"collapse"+ id } className="collapse show" aria-labelledby={"heading"+ id } data-parent="#accordion">
                 <div className="card-body">
-                  <RichText key="editable"
-                            tagName="div"
-                            value={ content }
-                            placeholder="Votre contenu"
-                            onChange={ updateContent } />
+                  <InnerBlocks />
                 </div>
               </div>
             </div>
@@ -86,7 +72,6 @@ registerBlockType('alecaddd/accordion-block', {
         const {
           id,
           title,
-          content, 
         } = attributes;
 
         return (
@@ -102,8 +87,7 @@ registerBlockType('alecaddd/accordion-block', {
         
             <div id={"collapse"+ id } className="collapse show" aria-labelledby={"heading"+ id } data-parent="#accordion">
               <div className="card-body">
-                <RichText.Content tagName="div" 
-                            value={ content } />
+                <InnerBlocks.Content />
               </div>
             </div>
           </div>
