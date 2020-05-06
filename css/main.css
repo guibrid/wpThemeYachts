@@ -554,7 +554,7 @@ footer#colophon div.social a:hover {
 .customButton {
     border-radius:20px;
     display: inline-block;
-    font-weight: normal;
+    font-weight: bold;
     padding: 8px 25px;
     font-size: 13px;
     text-transform: uppercase;

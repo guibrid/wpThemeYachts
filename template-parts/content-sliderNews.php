@@ -10,7 +10,7 @@ $my_query2 = new WP_Query( $args2 );
 if ($my_query2->have_posts()) {
 
     while ( $my_query2->have_posts() ) : $my_query2->the_post();
-var_dump(get_field('message_lien'));
+
         echo '
         <div class="newsblock">
             <div class="news">';
