@@ -42,16 +42,17 @@ get_header();
                 <!-- End Details -->
 
                 <!-- Galerie et video -->
-                <div class="container">
-
+                <div class="sliderVideo">
+                <div class="container " >
+                    
                     <?php if( acf_photo_gallery('bateau_galerie', $post->ID) ) : ?>
                     <div class="row" data-aos="zoom-in"><!-- Slider -->
-                        <div class="col-xl-8 offset-xl-2">
+                        <div class="col-xl-8 offset-xl-2 " >
                             <?php $images = acf_photo_gallery('bateau_galerie', $post->ID);
 
                             if( count($images) ){ ?>
                             
-                                <div id="bateauCarousel" class="carousel slide" data-ride="carousel">
+                                <div id="bateauCarousel" class="carousel slide boatSlider" data-ride="carousel">
                                     <ol class="carousel-indicators">
                                         <?php foreach($images as $key => $image){ ?>
                                             <li data-target="#bateauCarousel" data-slide-to="<?php echo $key; ?>" class="<?php if ($key == 0) { echo 'active'; } ?>"></li>
@@ -66,17 +67,19 @@ get_header();
                                     </div>
                                 </div>
                             <?php  } ?>
-                        </div>
+                            </div>
+                        
                     </div><!-- End Slider -->
                     <?php endif; ?>
 
                     <?php if( get_field( "bateau_video" ) ) : ?>
                     <div class="row">
-                        <div class="col-xl-8 offset-xl-2 video" data-aos="zoom-in">
+                        <div class="col-xl-8 offset-xl-2 video" data-aos="zoom-in" style="margin-top:-1px;">
                             <iframe src="<?php echo get_field( "bateau_video" ); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                     <?php endif; ?>
+                </div>
                 </div>
                 <!-- End Galerie et video -->
 

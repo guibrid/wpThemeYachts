@@ -1,8 +1,6 @@
 const { registerBlockType } = wp.blocks;
-const { RichText } = wp.blockEditor;
-
-const ALLOWED_BLOCKS = ['core/button'];
-
+const { RichText, InspectorControls } = wp.blockEditor;
+const { PanelBody } = wp.components
 
 /* Accordion Block */
 registerBlockType('alecaddd/accordion-block', {
@@ -15,7 +13,7 @@ registerBlockType('alecaddd/accordion-block', {
     attributes: {
         id : {
           type: 'string',
-          default: 'One'
+          type: 'accordion1'
         },
         title: {
             type: 'string'
@@ -34,6 +32,11 @@ registerBlockType('alecaddd/accordion-block', {
         } = attributes;
 
         // custom functions
+        function updateid(event) {
+          //console.log(newId)
+          setAttributes( { id: event.target.value } )
+        }
+
         function updateTitle(newTitle) {
             setAttributes( { title: newTitle } )
         }
@@ -44,8 +47,14 @@ registerBlockType('alecaddd/accordion-block', {
 
 
         return ([
+            <InspectorControls style={ { marginBottom: '40px' } }>
+                <PanelBody title={ 'ID du block accordion' }>
+                    <p>Chaque block doit avoir un id différent. Par exemple: block1, Block2, Block3,...</p>
+                    <input value={ id } onChange={ updateid } type="text" required />
+                </PanelBody>
+            </InspectorControls>,
 
-            <div className="card">
+            <div className="card" data-aos="zoom-in">
               <div className="card-header" id={"heading"+ id }>
                 <h5 className="mb-0">
                   <button className="btn btn-link" data-toggle="collapse" data-target={"#collapse"+ id } aria-expanded="true" aria-controls={"collapse"+ id }>
@@ -81,7 +90,7 @@ registerBlockType('alecaddd/accordion-block', {
         } = attributes;
 
         return (
-          <div className="card">
+          <div className="card" data-aos="zoom-in">
             <div className="card-header" id={"heading"+ id }>
               <h5 className="mb-0">
                 <button className="btn btn-link" data-toggle="collapse" data-target={"#collapse"+ id } aria-expanded="true" aria-controls={"collapse"+ id }>
