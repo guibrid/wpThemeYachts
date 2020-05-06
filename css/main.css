@@ -158,6 +158,12 @@ div#slider-homepage div.col-12 .newsblock p {
     font-size: 11px;
 }
 
+div#slider-homepage div.col-12 .newsblock p a{
+    color:#ffffff;
+    text-decoration: none;
+    display: inline-block;
+}
+
 div#slider-homepage div.imgBlock {
     background-position:center;
     background-repeat: none;
