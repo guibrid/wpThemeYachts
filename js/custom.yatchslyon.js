@@ -13,6 +13,9 @@ function closeNav() {
 /* Init Home page, event and prestations slider */
 $('.carousel').carousel();
 
+/* Init accordion */
+$('.collapse').collapse()
+
 /* Init Animation on Scrool */
 AOS.init();
 

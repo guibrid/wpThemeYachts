@@ -49,6 +49,14 @@ function alecaddd_gutenberg_blocks()
     wp_register_script( 'custom-cta-js', get_template_directory_uri() . '/build/index.js', 
         array( 'wp-blocks' , 'wp-block-editor', 'wp-components'));
 
+    register_block_type( 'alecaddd/accordion', array(
+        'editor_script' => 'custom-cta-js'
+    ) );
+
+    register_block_type( 'alecaddd/accordion-block', array(
+        'editor_script' => 'custom-cta-js'
+    ) );
+
     register_block_type( 'alecaddd/bateau-infos-bloc', array(
         'editor_script' => 'custom-cta-js'
     ) );

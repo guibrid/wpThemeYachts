@@ -86,6 +86,180 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/blocks/accordion-block.js":
+/*!***************************************!*\
+  !*** ./src/blocks/accordion-block.js ***!
+  \***************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+var registerBlockType = wp.blocks.registerBlockType;
+var RichText = wp.blockEditor.RichText;
+var ALLOWED_BLOCKS = ['core/button'];
+/* Accordion Block */
+
+registerBlockType('alecaddd/accordion-block', {
+  title: 'Accordion block',
+  description: 'Bloc à intégrer dans l\'accordion.',
+  icon: 'format-image',
+  category: 'layout',
+  // custom attributes
+  attributes: {
+    id: {
+      type: 'string',
+      default: 'One'
+    },
+    title: {
+      type: 'string'
+    },
+    content: {
+      type: 'string'
+    }
+  },
+  edit: function edit(_ref) {
+    var attributes = _ref.attributes,
+        setAttributes = _ref.setAttributes;
+    var id = attributes.id,
+        title = attributes.title,
+        content = attributes.content; // custom functions
+
+    function updateTitle(newTitle) {
+      setAttributes({
+        title: newTitle
+      });
+    }
+
+    function updateContent(newContent) {
+      setAttributes({
+        content: newContent
+      });
+    }
+
+    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "card"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "card-header",
+      id: "heading" + id
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h5", {
+      className: "mb-0"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("button", {
+      className: "btn btn-link",
+      "data-toggle": "collapse",
+      "data-target": "#collapse" + id,
+      "aria-expanded": "true",
+      "aria-controls": "collapse" + id
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      key: "editable",
+      tagName: "span",
+      value: title,
+      placeholder: "Votre titre",
+      onChange: updateTitle
+    })))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      id: "collapse" + id,
+      className: "collapse show",
+      "aria-labelledby": "heading" + id,
+      "data-parent": "#accordion"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "card-body"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      key: "editable",
+      tagName: "div",
+      value: content,
+      placeholder: "Votre contenu",
+      onChange: updateContent
+    }))))];
+  },
+  save: function save(_ref2) {
+    var attributes = _ref2.attributes;
+    var id = attributes.id,
+        title = attributes.title,
+        content = attributes.content;
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "card"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "card-header",
+      id: "heading" + id
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h5", {
+      className: "mb-0"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("button", {
+      className: "btn btn-link",
+      "data-toggle": "collapse",
+      "data-target": "#collapse" + id,
+      "aria-expanded": "true",
+      "aria-controls": "collapse" + id
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      tagName: "span",
+      value: title
+    })))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      id: "collapse" + id,
+      className: "collapse show",
+      "aria-labelledby": "heading" + id,
+      "data-parent": "#accordion"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "card-body"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      tagName: "div",
+      value: content
+    }))));
+  }
+});
+
+/***/ }),
+
+/***/ "./src/blocks/accordion.js":
+/*!*********************************!*\
+  !*** ./src/blocks/accordion.js ***!
+  \*********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+var registerBlockType = wp.blocks.registerBlockType;
+var InnerBlocks = wp.blockEditor.InnerBlocks;
+var ALLOWED_BLOCKS = ['alecaddd/accordion-block'];
+/* Accordion */
+
+registerBlockType('alecaddd/accordion', {
+  title: 'Accordion',
+  description: 'Ajoute une liste d\'accordion',
+  icon: 'format-image',
+  category: 'layout',
+  // custom attributes
+  attributes: {
+    title: {
+      type: 'string',
+      default: 'accordion'
+    }
+  },
+  edit: function edit(_ref) {
+    var attributes = _ref.attributes;
+    var title = attributes.title;
+    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      id: title
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(InnerBlocks, {
+      allowedBlocks: ALLOWED_BLOCKS
+    }))];
+  },
+  save: function save(_ref2) {
+    var attributes = _ref2.attributes;
+    var title = attributes.title;
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      id: title
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(InnerBlocks.Content, null));
+  }
+});
+
+/***/ }),
+
 /***/ "./src/blocks/boat-infos-block.js":
 /*!****************************************!*\
   !*** ./src/blocks/boat-infos-block.js ***!
@@ -780,6 +954,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_custom_titre_style2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/custom-titre-style2 */ "./src/blocks/custom-titre-style2.js");
 /* harmony import */ var _blocks_galery_block__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/galery-block */ "./src/blocks/galery-block.js");
 /* harmony import */ var _blocks_custom_cta4__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/custom-cta4 */ "./src/blocks/custom-cta4.js");
+/* harmony import */ var _blocks_accordion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/accordion */ "./src/blocks/accordion.js");
+/* harmony import */ var _blocks_accordion_block__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./blocks/accordion-block */ "./src/blocks/accordion-block.js");
+
+
 
 
 

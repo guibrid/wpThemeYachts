@@ -4,3 +4,5 @@ import './blocks/boat-infos-block';
 import './blocks/custom-titre-style2';
 import './blocks/galery-block';
 import './blocks/custom-cta4';
+import './blocks/accordion';
+import './blocks/accordion-block';
