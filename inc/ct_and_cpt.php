@@ -32,7 +32,7 @@ function custom_tax_cpt() {
 		'query_var'          => true,
 		'has_archive'        => true,
 		'rewrite' 			 => array('slug' => 'sliders'),
-		'menu_position'      => 3,
+		'menu_position'      => 5,
 		'menu_icon'			 => 'dashicons-images-alt',
 		'supports' => array( 'title', 'custom-fields' ),
 	];
@@ -69,7 +69,7 @@ function custom_tax_cpt() {
 		'query_var'          => true,
 		'has_archive'        => true,
 		'rewrite' 			 => array('slug' => 'evenements'),
-		'menu_position'      => 4,
+		'menu_position'      => 6,
 		'menu_icon'			 => 'dashicons-calendar-alt',
 		'show_in_rest'       => true, // to activate gutenberg
 		'supports' => array( 'title', 'custom-fields', 'thumbnail', 'excerpt', 'editor' ),
@@ -107,12 +107,48 @@ function custom_tax_cpt() {
 		'query_var'          => true,
 		'has_archive'        => true,
 		'rewrite' 			 => array('slug' => 'bateaux'),
-		'menu_position'      => 4,
+		'menu_position'      => 7,
 		'menu_icon'			 => 'dashicons-sos',
 		'show_in_rest'       => true, // to activate gutenberg
 		'supports' => array( 'title', 'custom-fields', 'thumbnail', 'excerpt', 'editor'  ),
 	];
 
 	register_post_type( 'bateaux', $args_bateau ); // register CP
+
+	// Alert taxonomy and CPT
+
+	$labels_message = [
+		'name'				 => __( 'Messages' ),
+		'singular_name' 	 => __( 'Message' ),
+		'add_new'            => __( 'Ajouter nouveau'),
+		'add_new_item'       => __( 'Nouveau message'),
+		'edit_item'          => __( 'Editer message'),
+		'new_item'           => __( 'Nouveau message'),
+		'all_items'          => __( 'Tous les messages'),
+		'view_item'          => __( 'Voir message'),
+		'search_items'       => __( 'Rechercher messages'),
+		'not_found'          =>  __( 'Aucun message trouvé'),
+		'not_found_in_trash' => __( 'Aucun message trouvé dans la corbeille'), 
+		'parent_item_colon'  => '',
+		'menu_name'          => __( 'Message alerte')
+	];
+
+	$args_message = [
+		'labels'             => $labels_message,
+		'public' 			 => true,
+		'has_archive' 		 => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true, 
+		'show_in_menu'       => true, 
+		'query_var'          => true,
+		'has_archive'        => true,
+		'rewrite' 			 => array('slug' => 'messages'),
+		'menu_position'      => 3,
+		'menu_icon'			 => 'dashicons-format-chat',
+		'show_in_rest'       => true, // to activate gutenberg
+		'supports' => array( 'title' , 'custom-fields' ),
+	];
+
+	register_post_type( 'messages', $args_message ); // register CP
 }
 add_action( 'init', 'custom_tax_cpt' );
