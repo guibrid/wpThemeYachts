@@ -5,7 +5,8 @@
 
 /** GENERAL **/
 body {
-    font-family: 'Gotham';
+    /*font-family: 'Gotham';*/
+    font-family: 'Montserrat', sans-serif;
 }
 .single-content a, p.has-text-color a{
     transition: 0.3s;

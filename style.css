@@ -14,7 +14,7 @@ Text Domain: yatchslyon
 @import url("css/bootstrap.min.css");
 @import url("css/bootstrap-grid.min.css");
 
-@font-face {
+/*@font-face {
     font-family: "Gotham";
     src: url("webfonts/Gotham-Black.otf");
     font-weight: bolder;
@@ -29,7 +29,7 @@ Text Domain: yatchslyon
 @font-face {
     font-family: 'Gotham';
     src: url('webfonts/GothamBook.ttf');
-}
+}*/
 
 
 /* TO DELETE AFTER Gutenberg tuto finish*/
