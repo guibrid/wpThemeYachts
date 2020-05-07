@@ -36,11 +36,12 @@ $(".js-overlay-start").unbind("click").bind("click", function(e) {
     $(".videoCover").hide();
 	$(".overlay-video").show();
     $("#player").attr("src", src);
-	/*setTimeout(function() {
-		$(".overlay-video").addClass("o1");
-		
-	}, 100);*/
 });
+
+
+/* set first iten as active in Carousel */
+$("div.wp-block-alecaddd-custom-galery div.carousel-item:first-child").addClass( "active" );
+
   /*
   https://github.com/kenwheeler/slick/issues/248
   https://coderwall.com/p/6qaeya/lazy-carousel-in-bootstrap
