@@ -49,6 +49,16 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
                     <select onChange={ updateIcone }>
                         <option value="Default">Default</option>
                         <option value="Presta">Prestation</option>
+                        <option value="Capacite">Capacité</option>
+                        <option value="Dispo">Mise à disposition</option>
+                        <option value="Details">Détails</option>
+                        <option value="Infos">Informations</option>
+                        <option value="Firework">Firework</option>
+                        <option value="Offre">Offre</option>
+                        <option value="Alarm">Alarme</option>
+                        <option value="Paiement">Paiement</option>
+                        <option value="Zoom">Zoom</option>
+                        <option value="Check">Check</option>
                     </select>
                 </PanelBody>
             </InspectorControls>,

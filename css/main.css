@@ -7,7 +7,7 @@
 body {
     /*font-family: 'Gotham';*/
     font-family: 'Montserrat', sans-serif;
-    background-color:#C69C6C
+
 }
 div.site-content {
     background-color: white;
@@ -466,6 +466,48 @@ div#eventCarousel {
 .boatInfosBloc h4.iconPresta{
     background-image: url('../img/icon-presta.png');
 }
+
+.boatInfosBloc h4.iconDispo{
+    background-image: url('../img/icon-dispo.png');
+}
+
+.boatInfosBloc h4.iconDetails{
+    background-image: url('../img/icon-details.png');
+}
+
+.boatInfosBloc h4.iconCapacite{
+    background-image: url('../img/icon-capacite.png');
+}
+
+.boatInfosBloc h4.iconInfos{
+    background-image: url('../img/icon-infos.png');
+}
+
+.boatInfosBloc h4.iconFirework{
+    background-image: url('../img/icon-firework.png');
+}
+
+.boatInfosBloc h4.iconOffre{
+    background-image: url('../img/icon-offre.png');
+}
+
+.boatInfosBloc h4.iconAlarm{
+    background-image: url('../img/icon-alarm.png');
+}
+
+.boatInfosBloc h4.iconPaiement{
+    background-image: url('../img/icon-paiement.png');
+}
+
+.boatInfosBloc h4.iconZoom{
+    background-image: url('../img/icon-zoom.png');
+}
+
+.boatInfosBloc h4.iconCheck{
+    background-image: url('../img/icon-check.png');
+}
+
+
 
 div#bateauCarousel {
     border: 10px black solid;

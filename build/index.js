@@ -336,7 +336,27 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
       value: "Default"
     }, "Default"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
       value: "Presta"
-    }, "Prestation")))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    }, "Prestation"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
+      value: "Capacite"
+    }, "Capacit\xE9"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
+      value: "Dispo"
+    }, "Mise \xE0 disposition"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
+      value: "Details"
+    }, "D\xE9tails"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
+      value: "Infos"
+    }, "Informations"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
+      value: "Firework"
+    }, "Firework"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
+      value: "Offre"
+    }, "Offre"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
+      value: "Alarm"
+    }, "Alarme"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
+      value: "Paiement"
+    }, "Paiement"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
+      value: "Zoom"
+    }, "Zoom"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
+      value: "Check"
+    }, "Check")))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "boatInfosBloc",
       "data-aos": "zoom-in"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {

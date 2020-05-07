@@ -36,7 +36,7 @@ get_header();
 		</div>
 		<div class="row" data-aos="zoom-in">
 		<div class="col-12 text-center">
-			<a href="<?php echo get_home_url(); ?>/actualites/" class="customButton blackButton">Tous les articles <i class="fas fa-chevron-right fa-xs"></i></a>
+			<a href="<?php echo get_home_url(); ?>/category/blog/" class="customButton blackButton">Tous les articles <i class="fas fa-chevron-right fa-xs"></i></a>
 		</div>
 		</div>
 
