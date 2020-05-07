@@ -54,8 +54,15 @@
     background-repeat: no-repeat ;
     background-position: center left;
     padding-bottom: 10px;
-    /*padding-left: 50px;*/
-    /*height: 50px;*/
+    padding-left: 50px;
+    height: 50px;
     vertical-align: middle;
-    /**background-image: url('../img/icon-presta.gif');**/
+}
+
+.boatInfosBloc h4.iconDefault{
+    background-image: url('img/icon-default.png');
+}
+
+.boatInfosBloc h4.iconPresta{
+    background-image: url('img/icon-presta.png');
 }

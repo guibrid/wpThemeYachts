@@ -5,7 +5,7 @@
 
 function alecaddd_gutenberg_default_colors()
 {
-    add_theme_support(
+    /*add_theme_support(
         'editor-color-palette',
         array(
             array(
@@ -40,7 +40,7 @@ function alecaddd_gutenberg_default_colors()
                 'size' => 24
             )
         )
-    );
+    );*/
 }
 add_action( 'init', 'alecaddd_gutenberg_default_colors' );
 

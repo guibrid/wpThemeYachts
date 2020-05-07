@@ -1,7 +1,6 @@
 const { registerBlockType } = wp.blocks;
-const { RichText } = wp.blockEditor;
-
- const ALLOWED_BLOCKS = ['core/button'];
+const { RichText, InspectorControls } = wp.blockEditor;
+const { PanelBody } = wp.components
 
 /* Bateaux Infos Block */
 registerBlockType('alecaddd/bateau-infos-bloc', {
@@ -17,7 +16,12 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
         },
         content: {
             type: 'string'
+        },
+        icone: {
+            type: 'string',
+            default: 'Default'
         }
+
     },
 
     edit: ({ attributes, setAttributes }) => {
@@ -25,6 +29,7 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
         const {
             title,
             content,
+            icone
         } = attributes;
 
         // custom functions
@@ -34,13 +39,25 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
         function updateContent(newContent) {
             setAttributes( { content: newContent } )
         }
-
+        function updateIcone(event) {
+            setAttributes( { icone: event.target.value } )
+        }
 
         return ([
+            <InspectorControls style={ { marginBottom: '40px' } }>
+                <PanelBody title={ 'Selection de l\'icone' }>
+                    <select onChange={ updateIcone }>
+                        <option value="Default">Default</option>
+                        <option value="Presta">Prestation</option>
+                    </select>
+                </PanelBody>
+            </InspectorControls>,
+
             <div className="boatInfosBloc" data-aos="zoom-in">
                 <div className="title">
                     <RichText key="editable"
                             tagName="h4"
+                            className= {"icon" + icone}
                             value={ title }
                             placeholder="Votre titre"
                             onChange={ updateTitle } />
@@ -61,12 +78,14 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
         const {
             title,
             content,
+            icone
         } = attributes;
 
         return (
             <div className="boatInfosBloc" data-aos="zoom-in">
                 <div className="title">
                     <RichText.Content tagName="h4" 
+                        className= {"icon" + icone}
                         value={ title } />
                 </div>
                     <RichText.Content tagName="div" 

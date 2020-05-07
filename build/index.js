@@ -275,8 +275,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 
 var registerBlockType = wp.blocks.registerBlockType;
-var RichText = wp.blockEditor.RichText;
-var ALLOWED_BLOCKS = ['core/button'];
+var _wp$blockEditor = wp.blockEditor,
+    RichText = _wp$blockEditor.RichText,
+    InspectorControls = _wp$blockEditor.InspectorControls;
+var PanelBody = wp.components.PanelBody;
 /* Bateaux Infos Block */
 
 registerBlockType('alecaddd/bateau-infos-bloc', {
@@ -291,13 +293,18 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
     },
     content: {
       type: 'string'
+    },
+    icone: {
+      type: 'string',
+      default: 'Default'
     }
   },
   edit: function edit(_ref) {
     var attributes = _ref.attributes,
         setAttributes = _ref.setAttributes;
     var title = attributes.title,
-        content = attributes.content; // custom functions
+        content = attributes.content,
+        icone = attributes.icone; // custom functions
 
     function updateTitle(newTitle) {
       setAttributes({
@@ -311,7 +318,25 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
       });
     }
 
-    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    function updateIcone(event) {
+      setAttributes({
+        icone: event.target.value
+      });
+    }
+
+    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(InspectorControls, {
+      style: {
+        marginBottom: '40px'
+      }
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(PanelBody, {
+      title: 'Selection de l\'icone'
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("select", {
+      onChange: updateIcone
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
+      value: "Default"
+    }, "Default"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
+      value: "Presta"
+    }, "Prestation")))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "boatInfosBloc",
       "data-aos": "zoom-in"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
@@ -319,6 +344,7 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
       key: "editable",
       tagName: "h4",
+      className: "icon" + icone,
       value: title,
       placeholder: "Votre titre",
       onChange: updateTitle
@@ -333,7 +359,8 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
   save: function save(_ref2) {
     var attributes = _ref2.attributes;
     var title = attributes.title,
-        content = attributes.content;
+        content = attributes.content,
+        icone = attributes.icone;
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "boatInfosBloc",
       "data-aos": "zoom-in"
@@ -341,6 +368,7 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
       className: "title"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
       tagName: "h4",
+      className: "icon" + icone,
       value: title
     })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
       tagName: "div",
@@ -956,8 +984,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_custom_titre_style2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/custom-titre-style2 */ "./src/blocks/custom-titre-style2.js");
 /* harmony import */ var _blocks_galery_block__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/galery-block */ "./src/blocks/galery-block.js");
 /* harmony import */ var _blocks_custom_cta4__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/custom-cta4 */ "./src/blocks/custom-cta4.js");
-/* harmony import */ var _blocks_accordion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/accordion */ "./src/blocks/accordion.js");
-/* harmony import */ var _blocks_accordion_block__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./blocks/accordion-block */ "./src/blocks/accordion-block.js");
+/* harmony import */ var _blocks_accordion__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/accordion */ "./src/blocks/accordion.js");
+/* harmony import */ var _blocks_accordion_block__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/accordion-block */ "./src/blocks/accordion-block.js");
 
 
 
