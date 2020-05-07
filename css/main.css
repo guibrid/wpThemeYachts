@@ -7,6 +7,10 @@
 body {
     /*font-family: 'Gotham';*/
     font-family: 'Montserrat', sans-serif;
+    background-color:#C69C6C
+}
+div.site-content {
+    background-color: white;
 }
 .single-content a, p.has-text-color a{
     transition: 0.3s;
@@ -457,7 +461,8 @@ div#eventCarousel {
 }
 
 div#bateauCarousel {
-    border: 10px solid #000000;
+    border: 10px black solid;
+    margin-left: 0.5px;
 }
 
 div.bateau-page .videoWarpper {
