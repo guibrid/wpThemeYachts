@@ -75,7 +75,21 @@ get_header();
                     <?php if( get_field( "bateau_video" ) ) : ?>
                     <div class="row">
                         <div class="col-xl-8 offset-xl-2 video" data-aos="zoom-in" style="margin-top:-1px;">
-                            <iframe src="<?php echo get_field( "bateau_video" ); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="videoWarpper">
+                                <?php $image = get_field('bateau_video_cover');?>
+
+                                <!-- take the url from embed share on youtube, be sure to include the &amp;autoplay=1 -->
+                                <div class="js-overlay-start start videoCover" style="background-image:url('<?php echo esc_url($image['url']); ?>');" data-url="<?php echo get_field( "bateau_video" ); ?>?rel=0&amp;showinfo=1&amp;autoplay=1">
+                                
+                                </div>
+
+                                <div class="overlay-video">
+                                
+                                    <iframe id="player" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+                                </div>
+
+                            </div>
+                            
                         </div>
                     </div>
                     <?php endif; ?>

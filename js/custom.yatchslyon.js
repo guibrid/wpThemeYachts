@@ -28,6 +28,19 @@ if($(window).width() >= 992) {
 /* Css pour le menu parent du submenu actif */
 $("a.dropdown-item").parents( "li.current-menu-parent" ).find("a.dropdown-toggle").css({"font-weight": "bold", "color": "#c69c6c"});
 
+
+/* Cover overlay video bateau */
+$(".js-overlay-start").unbind("click").bind("click", function(e) {
+	e.preventDefault();
+	var src = $(this).attr("data-url");
+    $(".videoCover").hide();
+	$(".overlay-video").show();
+    $("#player").attr("src", src);
+	/*setTimeout(function() {
+		$(".overlay-video").addClass("o1");
+		
+	}, 100);*/
+});
   /*
   https://github.com/kenwheeler/slick/issues/248
   https://coderwall.com/p/6qaeya/lazy-carousel-in-bootstrap

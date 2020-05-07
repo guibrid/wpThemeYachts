@@ -460,10 +460,28 @@ div#bateauCarousel {
     border: 10px solid #000000;
 }
 
-div.bateau-page .video iframe {
+div.bateau-page .videoWarpper {
+    position:relative;
+    height:250px;
+    background-color:black;
+}
+
+div.bateau-page .videoCover {
+    width:100%;
+    height:100%;
+    position: absolute;
+    color:white;
+    background-size: cover;
+    position: center;
+    background-repeat:no-repeat;    
     border: 10px solid #000000;
-    width: 100%;
-    height: 300px;
+    cursor: pointer;
+}
+
+div.bateau-page .overlay-video {
+  display: none;
+  height: 100%;
+  width: 100%;
 }
 
 div.bateau-page .boatBloc {
@@ -510,27 +528,21 @@ div.boatSlider {
     background-color: black;
 }
 
-/*@media (min-width: 576px) { 
-    div.bateau-page .video iframe {
-        height: 400px;
-    }
- }*/
-
 @media (min-width: 768px) { 
-    div.bateau-page .video iframe {
-        height: 400px;
+    div.bateau-page .videoWarpper {
+        height: 350px;
     }
  }
 
 @media (min-width: 992px) {
-    div.bateau-page .video iframe {
-        height: 500px;
+    div.bateau-page .videoWarpper {
+        height: 450px;
     }
  }
 
 @media (min-width: 1200px) { 
-    div.bateau-page .video iframe {
-        height: 500px;
+    div.bateau-page .videoWarpper {
+        height: 350px;
     }
  }
 
