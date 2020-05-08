@@ -61,13 +61,13 @@ function alecaddd_gutenberg_blocks()
         'editor_script' => 'custom-cta-js'
     ) );
 
-    register_block_type( 'alecaddd/custom-cta', array(
+    /*register_block_type( 'alecaddd/custom-cta', array(
         'editor_script' => 'custom-cta-js'
     ) );
 
     register_block_type( 'alecaddd/custom-cta2', array(
         'editor_script' => 'custom-cta-js'
-    ) );
+    ) );*/
 
     register_block_type( 'alecaddd/custom-titre-style2', array(
         'editor_script' => 'custom-cta-js'
@@ -77,8 +77,12 @@ function alecaddd_gutenberg_blocks()
         'editor_script' => 'custom-cta-js'
     ) );
 
-    register_block_type( 'alecaddd/custom-cta4', array(
+    register_block_type( 'alecaddd/custom-button', array(
         'editor_script' => 'custom-cta-js'
     ) );
+
+    /*register_block_type( 'alecaddd/custom-cta4', array(
+        'editor_script' => 'custom-cta-js'
+    ) );*/
 }
 add_action( 'init', 'alecaddd_gutenberg_blocks' );
