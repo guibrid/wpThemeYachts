@@ -37,6 +37,10 @@ registerBlockType('alecaddd/custom-button', {
             type: 'string',
             default: 'none',
         },
+        target: {
+            type: 'string',
+            default: '_self',
+        },
     },
 
     edit: ({ attributes, setAttributes }) => {
@@ -45,13 +49,15 @@ registerBlockType('alecaddd/custom-button', {
             style,
             link,
             alignment,
+            target
         } = attributes;
 
-        // custom functions
-        function onChangeTitle(newTitle) {
-            setAttributes( { title: newTitle } ) 
-        }
+        (function(){
+            console.log(target)
+           })();
+        
 
+        // custom functions
         function onChangeStyle(event) {
             setAttributes( { style: event.target.value } )
         }
@@ -63,6 +69,14 @@ registerBlockType('alecaddd/custom-button', {
         function onChangeAlignment ( newAlignment ) {
             setAttributes( { alignment: newAlignment === undefined ? 'none' : newAlignment } );
         };
+
+        function onChangeTarget(event) {
+            if (event.target.checked === true){
+                setAttributes( { target: '_blank' } )
+            } else {
+                setAttributes( { target: '_self' } )
+            }
+        }
 
 
         return ([
@@ -78,6 +92,9 @@ registerBlockType('alecaddd/custom-button', {
                         <option value="whiteButton">Blanc</option>
                     </select>
                 </PanelBody>
+                <PanelBody title={ 'Cible du lien' } initialOpen={ false }>
+                    <p><input onChange={ onChangeTarget } type="checkbox" /> Cochez pour ouvrir dans une nouvelle fenêtre </p>
+                </PanelBody>
             </InspectorControls>,
 
             <BlockControls>
@@ -88,13 +105,16 @@ registerBlockType('alecaddd/custom-button', {
             </BlockControls>,
 
             <div style={ { textAlign: alignment, margin: '20px 0' } }>
+                {console.log(target)}
                 <RichText key="editable"
                           tagName="a"
                           className={"customButton " + style}
                           placeholder="Texte du bouton"
                           href={ link }
                           value={ title }
-                          onChange={ onChangeTitle } />
+                          rel="noopener noreferrer"
+                          target= { target }
+                          onChange={ value => setAttributes({ title: value })} />
             </div>
 
         ]);
@@ -107,11 +127,12 @@ registerBlockType('alecaddd/custom-button', {
             style,
             link,
             alignment,
+            target
         } = attributes;
 
         return (
             <div style={ { textAlign: alignment, margin: '20px 0' } }>
-                <a href={ link } className={"customButton " + style} >{ title } <i class="fas fa-chevron-right fa-xs"></i></a>
+                <a href={ link } target= { target } rel="noopener noreferrer" className={"customButton " + style} >{ title } <i class="fas fa-chevron-right fa-xs"></i></a>
             </div>
         );
 

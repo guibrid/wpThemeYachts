@@ -443,6 +443,10 @@ registerBlockType('alecaddd/custom-button', {
     alignment: {
       type: 'string',
       default: 'none'
+    },
+    target: {
+      type: 'string',
+      default: '_self'
     }
   },
   edit: function edit(_ref) {
@@ -451,13 +455,13 @@ registerBlockType('alecaddd/custom-button', {
     var title = attributes.title,
         style = attributes.style,
         link = attributes.link,
-        alignment = attributes.alignment; // custom functions
+        alignment = attributes.alignment,
+        target = attributes.target;
 
-    function onChangeTitle(newTitle) {
-      setAttributes({
-        title: newTitle
-      });
-    }
+    (function () {
+      console.log(target);
+    })(); // custom functions
+
 
     function onChangeStyle(event) {
       setAttributes({
@@ -478,6 +482,19 @@ registerBlockType('alecaddd/custom-button', {
     }
 
     ;
+
+    function onChangeTarget(event) {
+      if (event.target.checked === true) {
+        setAttributes({
+          target: '_blank'
+        });
+      } else {
+        setAttributes({
+          target: '_self'
+        });
+      }
+    }
+
     return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(InspectorControls, {
       style: {
         marginBottom: '40px'
@@ -501,7 +518,13 @@ registerBlockType('alecaddd/custom-button', {
       value: "blackButton"
     }, "Noir"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
       value: "whiteButton"
-    }, "Blanc")))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(BlockControls, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(AlignmentToolbar, {
+    }, "Blanc"))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(PanelBody, {
+      title: 'Cible du lien',
+      initialOpen: false
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
+      onChange: onChangeTarget,
+      type: "checkbox"
+    }), " Cochez pour ouvrir dans une nouvelle fen\xEAtre "))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(BlockControls, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(AlignmentToolbar, {
       value: alignment,
       onChange: onChangeAlignment
     })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
@@ -509,14 +532,20 @@ registerBlockType('alecaddd/custom-button', {
         textAlign: alignment,
         margin: '20px 0'
       }
-    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+    }, console.log(target), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
       key: "editable",
       tagName: "a",
       className: "customButton " + style,
       placeholder: "Texte du bouton",
       href: link,
       value: title,
-      onChange: onChangeTitle
+      rel: "noopener noreferrer",
+      target: target,
+      onChange: function onChange(value) {
+        return setAttributes({
+          title: value
+        });
+      }
     }))];
   },
   save: function save(_ref2) {
@@ -524,7 +553,8 @@ registerBlockType('alecaddd/custom-button', {
     var title = attributes.title,
         style = attributes.style,
         link = attributes.link,
-        alignment = attributes.alignment;
+        alignment = attributes.alignment,
+        target = attributes.target;
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       style: {
         textAlign: alignment,
@@ -532,6 +562,8 @@ registerBlockType('alecaddd/custom-button', {
       }
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", {
       href: link,
+      target: target,
+      rel: "noopener noreferrer",
       className: "customButton " + style
     }, title, " ", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("i", {
       class: "fas fa-chevron-right fa-xs"
