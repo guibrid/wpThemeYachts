@@ -527,7 +527,7 @@ div.bateau-page .videoCover {
     position: absolute;
     color:white;
     background-size: cover;
-    position: center;
+    background-position: center center;
     background-repeat:no-repeat;    
     /*border: 10px solid #000000;*/
     cursor: pointer;
