@@ -34,7 +34,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 contactDetails">
-					<span> Tel : 04 72 56 51 23<br />Mail : contact@lesyatchsdelyon.com</span>
+					<span> Tél : 04 72 56 51 23<br />Mail : contact@lesyatchsdelyon.com</span>
 				</div>
 				<div class="col-sm-6 text-right">
 					<div class="social">
