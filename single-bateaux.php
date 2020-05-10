@@ -43,78 +43,26 @@ get_header();
 
                 <!-- Galerie et video -->
                 <div class="sliderVideo">
-                <div class="container " >
+                    <div class="container " >
+
+                        <div class="row" data-aos="zoom-in">
+                            <div class="col-xl-8 offset-xl-2 video" >
+
+                                <?php get_template_part( 'template-parts/bateau-galery'); ?>
+
+                                <?php get_template_part( 'template-parts/bateau-videoiframe'); ?>
+
+                            </div> 
+                        </div><!-- End Slider -->
+
+                    </div>
+                </div><!-- End Galerie et video -->
                     
-                    <?php if( acf_photo_gallery('bateau_galerie', $post->ID) ) : ?>
-                    <div class="row" data-aos="zoom-in"><!-- Slider -->
-                        <div class="col-xl-8 offset-xl-2 " >
-                            <?php $images = acf_photo_gallery('bateau_galerie', $post->ID);
 
-                            if( count($images) ){ ?>
-                            
-                                <div id="bateauCarousel" class="carousel slide boatSlider" data-ride="carousel">
-                                    <ol class="carousel-indicators">
-                                        <?php foreach($images as $key => $image){ ?>
-                                            <li data-target="#bateauCarousel" data-slide-to="<?php echo $key; ?>" class="<?php if ($key == 0) { echo 'active'; } ?>"></li>
-                                        <?php }  ?>
-                                    </ol>
-                                    <div class="carousel-inner">
-                                        <?php foreach($images as $key => $image){ ?>
-                                            <div class="carousel-item <?php if ($key == 0) { echo 'active'; } ?>">
-                                                <img class="d-block w-100" src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" title="<?php echo $image['title']; ?>" />
-                                            </div>
-                                        <?php }  ?>
-                                    </div>
-                                </div>
-                            <?php  } ?>
-                            </div>
-                        
-                    </div><!-- End Slider -->
-                    <?php endif; ?>
-
-                    <?php if( get_field( "bateau_video" ) ) : ?>
-                    <div class="row">
-                        <div class="col-xl-8 offset-xl-2 video" data-aos="zoom-in" style="margin-top:-1px;">
-                            <div class="videoWarpper">
-                                <?php $image = get_field('bateau_video_cover');?>
-
-                                <!-- take the url from embed share on youtube, be sure to include the &amp;autoplay=1 -->
-                                <div class="js-overlay-start start videoCover" style="background-image:url('<?php echo esc_url($image['url']); ?>');" data-url="<?php echo get_field( "bateau_video" ); ?>?rel=0&amp;showinfo=1&amp;autoplay=1">
-                                
-                                </div>
-
-                                <div class="overlay-video">
-                                
-                                    <iframe id="player" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
-                                </div>
-
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <?php endif; ?>
-                </div>
-                </div>
-                <!-- End Galerie et video -->
-
-                <?php if ( get_field( "plan_du_bateau" ) || get_field( "bateau_lien_plan" ) ) : ?>
-                <!-- Configuration -->
-                <div class="container configuration">
-                    <div class="row">
-                        <div class="col-12" data-aos="zoom-in">
-                            <div class="text-center title"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/configuration-title.gif" /></div>
-                        </div>
-                        <div class="col-xl-8 offset-xl-2" data-aos="zoom-in">
-                            <div class="text-center imgPlan"><img src="<?php echo get_field( "plan_du_bateau" )['url']; ?>" class="img-fluid" /></div>
-                            <p class="text-center"><?php if (get_field( "plan_du_bateau" )) { ?><a target="_blank" href="<?php echo get_field( "bateau_lien_plan" )['url']; ?>" class="customButton blackButton">Télécharger le pdf <i class="fas fa-chevron-right fa-xs"></i></a><?php } ?></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Configuration -->
-                <?php endif; ?>
+                <?php get_template_part( 'template-parts/bateau-plan'); ?>
 
             <?php endwhile; // End of the loop. ?>
-		</div><!-- #container -->
+
 
 	</main><!-- #main -->
 </div><!-- #primary -->

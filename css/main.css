@@ -508,11 +508,6 @@ div#eventCarousel {
 
 
 
-div#bateauCarousel {
-    border: 10px black solid;
-    margin-left: 0.5px;
-}
-
 div.bateau-page .videoWarpper {
     position:relative;
     height:250px;
@@ -527,7 +522,7 @@ div.bateau-page .videoCover {
     background-size: cover;
     position: center;
     background-repeat:no-repeat;    
-    border: 10px solid #000000;
+    /*border: 10px solid #000000;*/
     cursor: pointer;
 }
 
