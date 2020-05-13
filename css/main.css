@@ -208,7 +208,7 @@ div#slider-homepage div.imgBlock {
 }
 
 div#slider-homepage .carousel-caption {
-    bottom: 40%;
+    bottom: 10%;
 }
 
 div#slider-homepage {
@@ -233,6 +233,10 @@ div#slider-homepage {
 
 @media (min-width: 992px) {
 
+    div#slider-homepage .carousel-caption {
+        bottom: 20%;
+    }
+
     div#slider-homepage div.col-12 .newsblock {
         left: inherit;
         margin-right: inherit;
@@ -244,6 +248,10 @@ div#slider-homepage {
  }
 
 @media (min-width: 1200px) { 
+
+    div#slider-homepage .carousel-caption {
+        bottom: 30%;
+    }
 
     div#slider-homepage div.col-12 {
         padding: 0 35px 0 35px;
