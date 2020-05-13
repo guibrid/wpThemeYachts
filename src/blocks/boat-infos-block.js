@@ -63,7 +63,7 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
                 </PanelBody>
             </InspectorControls>,
 
-            <div className="boatInfosBloc" data-aos="zoom-in">
+            <div className="boatInfosBloc">
                 <div className="title">
                     <RichText key="editable"
                             tagName="h4"
@@ -92,7 +92,7 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
         } = attributes;
 
         return (
-            <div className="boatInfosBloc" data-aos="zoom-in">
+            <div className="boatInfosBloc">
                 <div className="title">
                     <RichText.Content tagName="h4" 
                         className= {"icon" + icone}

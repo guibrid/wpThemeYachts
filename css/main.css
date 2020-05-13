@@ -8,6 +8,8 @@ body {
     /*font-family: 'Gotham';*/
     font-family: 'Montserrat', sans-serif;
 
+   overflow-x: hidden;
+
 }
 div.site-content {
     background-color: white;
@@ -30,6 +32,11 @@ header#masthead {
 
 header#masthead .logo {
     margin: 10px 0;
+}
+
+.site-header .container-fuild {
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 /** NAVIGATION **/
@@ -55,7 +62,7 @@ nav#site-navigation li a {
     color: #e1e1e1;
     text-decoration: none;
     transition: 0.3s;
-    font-size: 14px ;
+    font-size: 16px ;
 }
 
 nav#site-navigation li.current_page_item a, nav#site-navigation li.current-menu-item a {
@@ -105,7 +112,7 @@ nav#site-navigation li.boat-vaporetto .dropdown-item:hover {
 nav#site-navigation .dropdown-item {
     background-color: #000000;
     color: #ffffff;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
 }
 nav#site-navigation .dropdown-item:focus, nav#site-navigation .dropdown-item:hover {
@@ -137,11 +144,11 @@ div#slider-homepage {
 }
 
 div#slider-homepage div.container-fluid {
-    max-width: 1200px;
+    /*max-width: 1200px;*/
 }
 
 div#slider-homepage div.col-12 {
-    padding: 0;
+    padding: 0 !important;
     position: relative;
 }
 

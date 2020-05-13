@@ -44,7 +44,7 @@ registerBlockType('alecaddd/accordion-block', {
                 </PanelBody>
             </InspectorControls>,
 
-            <div className="card" data-aos="zoom-in">
+            <div className="card">
               <div className="card-header" id={"heading"+ id }>
                 <h5 className="mb-0">
                   <button className="btn btn-link" data-toggle="collapse" data-target={"#collapse"+ id } aria-expanded="true" aria-controls={"collapse"+ id }>
@@ -75,7 +75,7 @@ registerBlockType('alecaddd/accordion-block', {
         } = attributes;
 
         return (
-          <div className="card" data-aos="zoom-in">
+          <div className="card">
             <div className="card-header" id={"heading"+ id }>
               <h5 className="mb-0">
                 <button className="btn btn-link" data-toggle="collapse" data-target={"#collapse"+ id } aria-expanded="true" aria-controls={"collapse"+ id }>

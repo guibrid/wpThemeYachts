@@ -27,7 +27,7 @@ get_header();
             </div>
 
             <div class="col-sm-6 order-sm-1" id="contactForm">
-	
+                    <h3>Demande de devis?</h3>
                 <?php echo do_shortcode('[contact-form-7 id="20" title="Formulaire de contact"]'); ?>
             
             </div>

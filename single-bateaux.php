@@ -18,7 +18,7 @@ get_header();
                 <!-- Header -->
                 <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),"full"); ?>
                 <div style="background-color:#000000; color:#ffffff">
-                    <div class="container">
+                    <div class="container-fuild">
                         <div class="row" data-aos="zoom-in">
                             <div class="col">
                                 <img src="<?php echo $featured_img_url; ?>" width="100%" />

@@ -151,8 +151,7 @@ registerBlockType('alecaddd/accordion-block', {
       type: "text",
       required: true
     }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-      className: "card",
-      "data-aos": "zoom-in"
+      className: "card"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "card-header",
       id: "heading" + id
@@ -184,8 +183,7 @@ registerBlockType('alecaddd/accordion-block', {
     var id = attributes.id,
         title = attributes.title;
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-      className: "card",
-      "data-aos": "zoom-in"
+      className: "card"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "card-header",
       id: "heading" + id
@@ -357,8 +355,7 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
     }, "Zoom"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("option", {
       value: "Check"
     }, "Check")))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-      className: "boatInfosBloc",
-      "data-aos": "zoom-in"
+      className: "boatInfosBloc"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "title"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
@@ -382,8 +379,7 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
         content = attributes.content,
         icone = attributes.icone;
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-      className: "boatInfosBloc",
-      "data-aos": "zoom-in"
+      className: "boatInfosBloc"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "title"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
