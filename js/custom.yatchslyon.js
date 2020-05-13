@@ -19,11 +19,23 @@ $('.collapse').collapse()
 /* Init Animation on Scrool */
 AOS.init();
 
-/* Ajuster la hauteur du slider à la hauteur de page sur les desktops */
-if($(window).width() >= 992) {
-    var sliderHeight = $(window).height() - 80;
-    $(".carousel-inner .imgBlock").height(sliderHeight);
-}
+//Recupere la hauteur du footer pour definir la margin-bottom du wrapper (sticky footer)
+$("div.wrapper").css({"padding-bottom": $(".footer-wrapper").height()});
+
+/*Ajuster la hauteur du slider pour que la home page n'ai pas de scrollbar */
+var headerHeight = $("header#masthead").height(); // Hauteur du header
+var footerHeight = $(".footer-wrapper").height() - 0.5; // Hauteur du footer (0.5 pour correction)
+var homeSliderHeight = $(window).height() - headerHeight - footerHeight; // Hauteur du slider
+$(".carousel-inner .imgBlock").height(homeSliderHeight); // Set la hauteur du slider
+
+/* Même chose mais quand on resize pour recalculer dynamiquements les hauteurs des éléments */
+$(window).on('resize', function(){
+  var headerHeight = $("header#masthead").height()
+  var footerHeight = $(".footer-wrapper").height()-0.5;
+  var homeSliderHeight = $(window).height() - headerHeight - footerHeight;
+  $(".carousel-inner .imgBlock").height(homeSliderHeight);
+});
+
 
 /* Css pour le menu parent du submenu actif */
 $("a.dropdown-item").parents( "li.current-menu-parent" ).find("a.dropdown-toggle").css({"font-weight": "bold", "color": "#c69c6c"});
