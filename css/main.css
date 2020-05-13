@@ -4,16 +4,33 @@
 
 
 /** GENERAL **/
-body {
-    /*font-family: 'Gotham';*/
-    font-family: 'Montserrat', sans-serif;
-
-   overflow-x: hidden;
-
+html {
+    height: 100%;
 }
+
+body {
+    font-family: 'Montserrat';
+    overflow-x: hidden;
+    height: 100%;
+}
+
+div.wrapper {
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: 190px; /* Height of footer */
+    min-height: 100%;
+}
+
+div.footer-wrapper{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 div.site-content {
     background-color: white;
 }
+
 .single-content a, p.has-text-color a{
     transition: 0.3s;
     text-decoration: none;
@@ -42,7 +59,7 @@ header#masthead .logo {
 /** NAVIGATION **/
 nav#site-navigation {
     display: none;
-    font-family: 'Gotham';
+    font-family: 'Montserrat';
     text-transform: uppercase;
 }
 

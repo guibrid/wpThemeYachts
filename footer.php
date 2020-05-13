@@ -12,8 +12,9 @@
 ?>
 
 	</div><!-- #content -->
+	
 
-
+	<div class="footer-wrapper">
 	<div id="sub-footer"><!-- #sub-footer -->
 		<div class="container">
 			<div class="row">
@@ -53,8 +54,10 @@
 			</div>
 		</div>
 	</footer><!-- #colophon -->
+	</div><!-- #footer wrapper -->
+	
 </div><!-- #page -->
-
+</div><!-- #warpper -->
 <?php wp_footer(); ?>
 
 </body>

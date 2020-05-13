@@ -22,13 +22,13 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<div class="wrapper">
 <div id="page" class="site">
+	
+		<header id="masthead" class="site-header">
+				
+					<?php get_template_part( 'template-parts/main-navigation'); ?>
+				
+		</header><!-- #masthead -->
 
-	<header id="masthead" class="site-header">
-			
-				<?php get_template_part( 'template-parts/main-navigation'); ?>
-			
-		
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+		<div id="content" class="site-content">
