@@ -2,6 +2,7 @@
 $args = [
   'post_type' => 'slider',
   'post_status' => 'publish',
+  'order_by' => 'date'
   ];
 
 $my_query = new WP_Query( $args ); 

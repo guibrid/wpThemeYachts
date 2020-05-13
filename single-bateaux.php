@@ -46,7 +46,7 @@ get_header();
                     <div class="container " >
 
                         <div class="row" data-aos="zoom-in">
-                            <div class="col-xl-8 offset-xl-2 video" >
+                            <div class="col-xl-12 video" >
 
                                 <?php get_template_part( 'template-parts/bateau-galery'); ?>
 
