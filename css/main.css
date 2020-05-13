@@ -493,8 +493,11 @@ div#eventCarousel {
 
 /** Bateaux page **/
 .bateau-page .excerpt {
+    text-align: center;
     margin-top: 25px;
     margin-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .boatDetails {

@@ -25,7 +25,6 @@ $("div.wrapper").css({"padding-bottom": $(".footer-wrapper").height()});
 var headerHeight = $("header#masthead").height(); // Hauteur du header
 var footerHeight = $(".footer-wrapper").height() - 0.5; // Hauteur du footer (0.5 pour correction)
 var homeSliderHeight = $(window).height() - headerHeight - footerHeight; // Hauteur du slider
-console.log(homeSliderHeight);
 $(".carousel-inner .imgBlock").height(homeSliderHeight); // Set la hauteur du slider
 
 /* Même chose mais quand on resize pour recalculer dynamiquements les hauteurs des éléments */
@@ -48,7 +47,6 @@ function scrollFunction() {
 }
 
 $('#backTopButton').click(function(){
-  console.log('toto');
   $('html, body').animate({
     scrollTop: $("#page").offset().top
 }, 1000);
