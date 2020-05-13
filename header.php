@@ -16,14 +16,16 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div class="wrapper">
-<div id="page" class="site">
+	<div id="page" class="site">
+
+		<a id="backTopButton" title="Go to top">&#10148;</a> <!-- Back to the top button -->
 	
 		<header id="masthead" class="site-header">
 				

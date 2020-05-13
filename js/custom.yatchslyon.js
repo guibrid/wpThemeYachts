@@ -1,5 +1,4 @@
 /******** MOBILE NAVIGATION SLIDER TRIGGER */
-
 /* Set the width of the side navigation to 250px */
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
@@ -26,6 +25,7 @@ $("div.wrapper").css({"padding-bottom": $(".footer-wrapper").height()});
 var headerHeight = $("header#masthead").height(); // Hauteur du header
 var footerHeight = $(".footer-wrapper").height() - 0.5; // Hauteur du footer (0.5 pour correction)
 var homeSliderHeight = $(window).height() - headerHeight - footerHeight; // Hauteur du slider
+console.log(homeSliderHeight);
 $(".carousel-inner .imgBlock").height(homeSliderHeight); // Set la hauteur du slider
 
 /* Même chose mais quand on resize pour recalculer dynamiquements les hauteurs des éléments */
@@ -34,6 +34,24 @@ $(window).on('resize', function(){
   var footerHeight = $(".footer-wrapper").height()-0.5;
   var homeSliderHeight = $(window).height() - headerHeight - footerHeight;
   $(".carousel-inner .imgBlock").height(homeSliderHeight);
+});
+
+/* Back to the top page button */
+var mybutton = document.getElementById("backTopButton");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+$('#backTopButton').click(function(){
+  console.log('toto');
+  $('html, body').animate({
+    scrollTop: $("#page").offset().top
+}, 1000);
 });
 
 
