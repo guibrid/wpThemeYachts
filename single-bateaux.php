@@ -19,12 +19,12 @@ get_header();
                 <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),"full"); ?>
                 <div style="background-color:#000000; color:#ffffff">
                     <div class="container-fuild">
-                        <div class="row" data-aos="zoom-in">
+                        <div class="row">
                             <div class="col">
                                 <img src="<?php echo $featured_img_url; ?>" width="100%" />
                             </div>
                         </div>
-                        <div class="row" data-aos="zoom-in">
+                        <div class="row">
                             <div class="col-xl-8 offset-xl-2 text-center excerpt">
                                 <?php the_excerpt(); ?>
                                 <?php if (get_field( "lien_reservation" )) { ?><a href="<?php echo get_field( "lien_reservation" ); ?>" target="_blank" class="customButton whiteButton">Réservation <i class="fas fa-chevron-right fa-xs"></i></a><?php } ?>
