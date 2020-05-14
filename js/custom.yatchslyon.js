@@ -35,6 +35,11 @@ $(window).on('resize', function(){
   $(".carousel-inner .imgBlock").height(homeSliderHeight);
 });
 
+/*Ajuster la hauteur du slider de la page bateau  */
+if($(window).width() >= 992) {
+$('.boatSlider img').height( $(window).height() - 100 ); 
+}
+
 /* Back to the top page button */
 var mybutton = document.getElementById("backTopButton");
 window.onscroll = function() {scrollFunction()};
