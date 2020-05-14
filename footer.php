@@ -18,11 +18,11 @@
 	<div id="sub-footer"><!-- #sub-footer -->
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 text-lg-left contact" data-aos="zoom-in">
+				<div class="col-lg-6 text-lg-left contact">
 					<span>Nous contacter</span><br />
 					<a href="<?php echo get_home_url(); ?>/contact/" class="customButton whiteButton">Un devis ? <i class="fas fa-chevron-right fa-xs"></i></a>
 				</div>
-				<div class="col-lg-6 text-lg-left newsletter"  data-aos="zoom-in">
+				<div class="col-lg-6 text-lg-left newsletter">
 					<span>Newsletter</span><br />
 					<?php echo do_shortcode('[mc4wp_form id="322"]'); ?>
 				</div>
