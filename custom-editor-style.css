@@ -155,3 +155,19 @@
     color: #ffffff;
     text-decoration: none;
 }
+
+/* Make gutenberg editor window bigger
+/* Main column width */
+.wp-block {
+    max-width: 1200px;
+}
+ 
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+    max-width: 1080px;
+}
+ 
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+    max-width: none;
+}
