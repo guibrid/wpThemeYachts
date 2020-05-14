@@ -1,5 +1,5 @@
 const { registerBlockType } = wp.blocks;
-const { RichText, InspectorControls } = wp.blockEditor;
+const { RichText, InspectorControls, InnerBlocks } = wp.blockEditor;
 const { PanelBody } = wp.components
 
 /* Bateaux Infos Block */
@@ -14,9 +14,6 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
         title: {
             type: 'string'
         },
-        content: {
-            type: 'string'
-        },
         icone: {
             type: 'string',
             default: 'Default'
@@ -28,16 +25,12 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
 
         const {
             title,
-            content,
             icone
         } = attributes;
 
         // custom functions
         function updateTitle(newTitle) {
             setAttributes( { title: newTitle } )
-        }
-        function updateContent(newContent) {
-            setAttributes( { content: newContent } )
         }
         function updateIcone(event) {
             setAttributes( { icone: event.target.value } )
@@ -72,12 +65,9 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
                             placeholder="Votre titre"
                             onChange={ updateTitle } />
                 </div>
-                    <RichText key="editable"
-                            tagName="div"
-                            value={ content }
-                            placeholder="Votre contenu"
-                            onChange={ updateContent } />
-                
+                <div>
+                    <InnerBlocks />
+                </div>            
             </div>
         ]);
         
@@ -87,7 +77,6 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
 
         const {
             title,
-            content,
             icone
         } = attributes;
 
@@ -98,8 +87,9 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
                         className= {"icon" + icone}
                         value={ title } />
                 </div>
-                    <RichText.Content tagName="div" 
-                        value={ content } />
+                <div>
+                    <InnerBlocks.Content />
+                </div>
             </div>
         )
 

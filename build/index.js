@@ -275,7 +275,8 @@ __webpack_require__.r(__webpack_exports__);
 var registerBlockType = wp.blocks.registerBlockType;
 var _wp$blockEditor = wp.blockEditor,
     RichText = _wp$blockEditor.RichText,
-    InspectorControls = _wp$blockEditor.InspectorControls;
+    InspectorControls = _wp$blockEditor.InspectorControls,
+    InnerBlocks = _wp$blockEditor.InnerBlocks;
 var PanelBody = wp.components.PanelBody;
 /* Bateaux Infos Block */
 
@@ -289,9 +290,6 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
     title: {
       type: 'string'
     },
-    content: {
-      type: 'string'
-    },
     icone: {
       type: 'string',
       default: 'Default'
@@ -301,18 +299,11 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
     var attributes = _ref.attributes,
         setAttributes = _ref.setAttributes;
     var title = attributes.title,
-        content = attributes.content,
         icone = attributes.icone; // custom functions
 
     function updateTitle(newTitle) {
       setAttributes({
         title: newTitle
-      });
-    }
-
-    function updateContent(newContent) {
-      setAttributes({
-        content: newContent
       });
     }
 
@@ -365,18 +356,11 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
       value: title,
       placeholder: "Votre titre",
       onChange: updateTitle
-    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
-      key: "editable",
-      tagName: "div",
-      value: content,
-      placeholder: "Votre contenu",
-      onChange: updateContent
-    }))];
+    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(InnerBlocks, null)))];
   },
   save: function save(_ref2) {
     var attributes = _ref2.attributes;
     var title = attributes.title,
-        content = attributes.content,
         icone = attributes.icone;
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "boatInfosBloc"
@@ -386,10 +370,7 @@ registerBlockType('alecaddd/bateau-infos-bloc', {
       tagName: "h4",
       className: "icon" + icone,
       value: title
-    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
-      tagName: "div",
-      value: content
-    }));
+    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(InnerBlocks.Content, null)));
   }
 });
 
