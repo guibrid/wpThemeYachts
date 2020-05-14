@@ -36,17 +36,17 @@ get_header();
                 <!-- End Header -->
 
                 <!-- Details -->
-                <div class="container boatDetails">
+                <div class="container-fluid boatDetails">
                     <?php the_content(); ?>
                 </div>
                 <!-- End Details -->
 
                 <!-- Galerie et video -->
                 <div class="sliderVideo">
-                    <div class="container " >
+                    <div class="container-fluid" >
 
-                        <div class="row" data-aos="zoom-in">
-                            <div class="col-xl-12 video" >
+                        <div class="row">
+                            <div class="col video" >
 
                                 <?php get_template_part( 'template-parts/bateau-galery'); ?>
 

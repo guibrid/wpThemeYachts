@@ -1,7 +1,7 @@
 
 <?php if ( get_field( "plan_du_bateau" ) || get_field( "bateau_lien_plan" ) ) : ?>
     <!-- Configuration -->
-    <div class="container configuration">
+    <div class="container-fluid configuration">
         <div class="row">
             <div class="col-12" data-aos="zoom-in">
                 <div class="text-center title"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/configuration-title.gif" /></div>
