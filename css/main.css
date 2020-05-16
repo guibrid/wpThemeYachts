@@ -205,10 +205,10 @@ div#slider-homepage div.col-12 .newsblock {
     left: 0px;
     margin-left: auto;
     margin-right: auto;
-    top:25px;
+    top:0;
     z-index: 100;
-    width: 250px;
-    padding: 5px 15px;
+    width: 100%;
+    padding: 5px 10px;
     background-color: #c69c6c;
     text-align: center;
     color: #ffffff;
@@ -223,6 +223,11 @@ div#slider-homepage div.col-12 .newsblock p {
 div#slider-homepage div.col-12 .newsblock p a{
     color:#ffffff;
     text-decoration: none;
+    display: inline-block;
+}
+
+
+div#slider-homepage div.col-12 .newsblock p span.emailNews {
     display: inline-block;
 }
 
@@ -257,6 +262,7 @@ div#slider-homepage {
         height: 500px;
     }*/
 
+
  }
 
 @media (min-width: 992px) {
@@ -271,6 +277,11 @@ div#slider-homepage {
         margin-left: inherit;
         right:100px;
         top:50px;
+        width: 250px;
+    }
+
+    div#slider-homepage div.col-12 .newsblock p span.emailNews {
+        display: block;
     }
     
  }
