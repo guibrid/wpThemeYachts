@@ -217,7 +217,7 @@ div#slider-homepage div.col-12 .newsblock {
 div#slider-homepage div.col-12 .newsblock p {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 11px;
+    font-size: 10px;
 }
 
 div#slider-homepage div.col-12 .newsblock p a{
@@ -250,9 +250,9 @@ div#slider-homepage {
 
 @media (min-width: 576px) {
 
-    /*div#slider-homepage div.imgBlock {
-        height: 400px;
-    }*/
+    div#slider-homepage div.col-12 .newsblock p {
+        font-size: 12px;
+    }
     
 }
 
