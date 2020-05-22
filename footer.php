@@ -41,10 +41,10 @@
 					<div class="social">
 						<a href="https://www.facebook.com/pages/Les-Yachts-de-Lyon/215000789034" target="_blank">
 							<i class="fab fa-facebook-f fa-lg"></i>
-						</a>&nbsp;&nbsp;
+						</a>
 						<a href="https://www.instagram.com/bateau_l_evasion/?hl=fr" target="_blank">
 							<i class="fab fa-instagram fa-lg"></i>
-						</a>&nbsp;&nbsp;
+						</a>
 						<a href="https://twitter.com/yachtsdelyon" target="_blank">
 							<i class="fab fa-twitter fa-lg"></i>
 						</a>

@@ -793,6 +793,9 @@ footer .contactDetails {
 footer#colophon div.social a {
     color: #000000;
     transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    margin: auto 5px;
 }
 
 footer#colophon div.social a:hover {
