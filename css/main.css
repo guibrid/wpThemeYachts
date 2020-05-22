@@ -91,6 +91,7 @@ nav#site-navigation {
     display: none;
     font-family: 'Montserrat';
     text-transform: uppercase;
+    margin-right: 25px;
 }
 
 nav#site-navigation ul {
@@ -169,6 +170,45 @@ nav#site-navigation .dropdown-item:focus, nav#site-navigation .dropdown-item:hov
 
 div.langue-switcher {
     display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 26px;
+}
+
+div.wpml-ls-legacy-dropdown-click a {
+    display: inline-block;
+}
+.wpml-ls-legacy-dropdown-click {
+    width: inherit;
+    max-width: inherit;
+
+}
+
+.wpml-ls-legacy-dropdown-click a {
+    padding: 0px;
+}
+.wpml-ls-legacy-dropdown-click a:hover, .wpml-ls-legacy-dropdown-click a:focus, .wpml-ls-legacy-dropdown-click .wpml-ls-current-language:hover > a {
+    background-color: #000000;
+    color: #c69c6c;
+    border:0px;
+    text-decoration: none;
+}
+.wpml-ls-statics-shortcode_actions a {
+    background-color: #000000;
+    color: #FFFFFF;
+    border:0px;
+    text-decoration: none;
+}
+
+.wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
+    border-top: 0;
+}
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle::after {
+    display: none;
+}
+
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
+    padding:0;
 }
 
 @media (min-width: 992px) {
@@ -195,6 +235,10 @@ div.langue-switcher {
 }
 
 @media (min-width: 1150px) {
+
+    div.langue-switcher {
+        top: 3px;
+    }
 
     nav#site-navigation .nav-link {
         padding: .5rem 1rem;

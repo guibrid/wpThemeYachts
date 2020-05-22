@@ -5,7 +5,7 @@
         <img src="<?php echo get_template_directory_uri() . '/img/logo.png'; ?>" class="logo" />
       </a>
     </div>
-    <div class="col-6 col-lg-10" style="text-align:right">
+    <div class="col-6 col-lg-10" style="text-align:right; position:relative;">
 
         <!-- site-navigation Desktop -->
           <?php
@@ -37,7 +37,7 @@
             </div>
 
           </nav>
-          <div class="langue-switcher">FR</div>
+          <div class="langue-switcher"><?php do_action('wpml_add_language_selector'); ?></div>
         
 
     </div>

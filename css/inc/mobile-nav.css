@@ -1,8 +1,9 @@
  /* The side navigation menu */
  .mobile-navigation {
    display: inline-block;
+   margin-right: 25px;
  }
- 
+
  .mobile-navigation .burger {
     margin-top: 17px;
     display: inline-block;

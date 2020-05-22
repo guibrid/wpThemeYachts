@@ -75,6 +75,13 @@ $(".js-overlay-start").unbind("click").bind("click", function(e) {
 /* set first iten as active in Carousel */
 $("div.wp-block-alecaddd-custom-galery div.carousel-item:first-child").addClass( "active" );
 
+
+$(".wpml-ls-statics-shortcode_actions span:contains('Français')").html("FR");
+$(".wpml-ls-statics-shortcode_actions span:contains('Anglais')").html("EN");
+$(".wpml-ls-statics-shortcode_actions span:contains('English')").html("EN");
+$(".wpml-ls-statics-shortcode_actions span:contains('French')").html("FR");
+
+//$('.wpml-ls-display').remove();
   /*
   https://github.com/kenwheeler/slick/issues/248
   https://coderwall.com/p/6qaeya/lazy-carousel-in-bootstrap
