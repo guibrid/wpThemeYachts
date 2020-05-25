@@ -18,8 +18,16 @@ get_header();
         <div class="row">
 
             <div class="col-sm-6" id="contactForm">
-                <h3>Demande de devis</h3>
-                <?php echo do_shortcode('[contact-form-7 id="20" title="Formulaire de contact"]'); ?>
+                <h3><?php _e('Demande de devis', 'yachtsLyon_theme'); ?></h3>
+                <?php
+                    if (ICL_LANGUAGE_CODE == "fr") {
+                        $form = '[contact-form-7 id="20" title="Formulaire de contact"]';
+                    } else {
+                        $form = '[contact-form-7 id="703" title="Contact form"]';
+                    }
+                    ?>
+                
+                <?php echo do_shortcode($form); ?>
             </div>
 
             <div class="col-sm-6" id="contactContent">

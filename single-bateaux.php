@@ -27,8 +27,8 @@ get_header();
                         <div class="row">
                             <div class="col-xl-8 offset-xl-2 text-center excerpt">
                                 <?php the_excerpt(); ?>
-                                <?php if (get_field( "lien_reservation" )) { ?><a href="<?php echo get_field( "lien_reservation" ); ?>" target="_blank" class="customButton whiteButton">Réservation <i class="fas fa-chevron-right fa-xs"></i></a><?php } ?>
-                                <?php if (get_field( "lien_carte_dabonnement" )) { ?><a href="<?php echo get_field( "lien_carte_dabonnement" ); ?>" target="_blank" class="customButton whiteButton">Carte d'abonnement <i class="fas fa-chevron-right fa-xs"></i></a><?php } ?>
+                                <?php if (get_field( "lien_reservation" )) { ?><a href="<?php echo get_field( "lien_reservation" ); ?>" target="_blank" class="customButton whiteButton"><?php _e('Réservation', 'yachtsLyon_theme'); ?> <i class="fas fa-chevron-right fa-xs"></i></a><?php } ?>
+                                <?php if (get_field( "lien_carte_dabonnement" )) { ?><a href="<?php echo get_field( "lien_carte_dabonnement" ); ?>" target="_blank" class="customButton whiteButton"><?php _e("Carte d'abonnement", 'yachtsLyon_theme'); ?> <i class="fas fa-chevron-right fa-xs"></i></a><?php } ?>
                             </div>
                         </div>
                     </div>

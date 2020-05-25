@@ -19,11 +19,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 text-lg-left contact">
-					<span>Nous contacter</span><br />
-					<a href="<?php echo get_home_url(); ?>/contact/" class="customButton whiteButton">Un devis ? <i class="fas fa-chevron-right fa-xs"></i></a>
+					<span><?php _e('Nous contacter', 'yachtsLyon_theme'); ?></span><br />
+					<a href="<?php echo get_home_url(); ?>/contact/" class="customButton whiteButton"><?php _e('Un devis ?', 'yachtsLyon_theme'); ?> <i class="fas fa-chevron-right fa-xs"></i></a>
 				</div>
 				<div class="col-lg-6 text-lg-left newsletter">
-					<span>Newsletter</span><br />
+					<span><?php _e('Newsletter', 'yachtsLyon_theme'); ?></span><br />
 					<?php echo do_shortcode('[mc4wp_form id="322"]'); ?>
 				</div>
 			</div>
@@ -35,7 +35,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 contactDetails">
-					<span> Tél : 04 72 56 51 23<br />Mail : contact@lesyachtsdelyon.com</span>
+					<span><?php _e('Tél', 'yachtsLyon_theme'); ?> : 04 72 56 51 23<br />Mail : contact@lesyachtsdelyon.com</span>
 				</div>
 				<div class="col-sm-6 text-right">
 					<div class="social">

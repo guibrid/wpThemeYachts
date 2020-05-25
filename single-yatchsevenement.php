@@ -22,10 +22,10 @@ get_header();
 				</div>
 				<div class="col-md-6 text-right">
 					<div class="eventDetails">
-						<?php if (get_field( "event_booking_link" )) { ?><a target="_blank" href="<?php echo get_field( "event_booking_link" ); ?>" class="customButton blackButton">Réservez <i class="fas fa-chevron-right fa-xs"></i></a><?php } ?>
+						<?php if (get_field( "event_booking_link" )) { ?><a target="_blank" href="<?php echo get_field( "event_booking_link" ); ?>" class="customButton blackButton"><?php _e('Réservez', 'yachtsLyon_theme'); ?> <i class="fas fa-chevron-right fa-xs"></i></a><?php } ?>
 						<?php if (get_field( "event_prix" )) { ?><div class="prix"><?php echo get_field( "event_prix" ); ?>€<sup>/pers</sup></div><?php } ?>
-						<?php if (get_field( "event_duree" )) { ?><div class="duree">Durée: <b><?php echo get_field( "event_duree" ); ?></b></div><?php } ?>
-						<?php if (get_field( "event_boarding" )) { ?><div class="boarding">Lieu d'embarquement:<b> <?php echo get_field( "event_boarding" ); ?></b></div><?php } ?>
+						<?php if (get_field( "event_duree" )) { ?><div class="duree"><?php _e('Durée', 'yachtsLyon_theme'); ?>: <b><?php echo get_field( "event_duree" ); ?></b></div><?php } ?>
+						<?php if (get_field( "event_boarding" )) { ?><div class="boarding"><?php _e('Lieu d\'embarquement', 'yachtsLyon_theme'); ?>:<b> <?php echo get_field( "event_boarding" ); ?></b></div><?php } ?>
 					</div>
 				</div>		
 			</div>
@@ -64,7 +64,7 @@ get_header();
 		
 			<div class="row" data-aos="zoom-in">
 				<div class="col-12 text-center">
-					<a href="<?php echo get_home_url(); ?>/evenements/" class="customButton blackButton">Tous les évènements <i class="fas fa-chevron-right fa-xs"></i></a><br /><br />
+					<a href="<?php echo get_home_url(); ?>/evenements/" class="customButton blackButton"><?php _e('Tous les évènements', 'yachtsLyon_theme'); ?> <i class="fas fa-chevron-right fa-xs"></i></a><br /><br />
 				</div>
 			</div>
 

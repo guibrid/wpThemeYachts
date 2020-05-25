@@ -16,7 +16,7 @@ get_header();
         <div class="container">
 
             <div class="row">
-                <div class="col-12 text-center"><h1>Evènements éphémères</h1></div>
+                <div class="col-12 text-center"><h1><?php _e('Evènements éphémères', 'yachtsLyon_theme'); ?></h1></div>
             </div>
 
             <?php 
@@ -42,8 +42,8 @@ get_header();
                                     <div class="boatName"><?php echo get_field( "nom_du_bateau" ); ?></div>
                                     <div class="eventName"><?php the_title(); ?></div>
                                     <div class="prix"><?php echo get_field( "event_prix" ); ?>€<sup>/pers</sup></div>
-                                    <div class="duree">Durée: <b><?php echo get_field( "event_duree" ); ?></b></div>
-                                    <div class="boarding">Lieu d'embarquement:<br /><b><?php echo get_field( "event_boarding" ); ?></b></div>
+                                    <div class="duree"><?php _e('Durée', 'yachtsLyon_theme'); ?>: <b><?php echo get_field( "event_duree" ); ?></b></div>
+                                    <div class="boarding"><?php _e('Lieu d\'embarquement', 'yachtsLyon_theme'); ?>:<br /><b><?php echo get_field( "event_boarding" ); ?></b></div>
                                 </div>
                             </a>
                         </div>

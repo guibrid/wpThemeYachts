@@ -17,7 +17,7 @@ get_header();
 		<div class="container actu-page">
 
 			<div class="row" data-aos="zoom-in">
-				<div class="col-12 text-center"><h1>Actualités</h1></div>
+				<div class="col-12 text-center"><h1><?php _e('Actualités', 'yachtsLyon_theme'); ?></h1></div>
 			</div>
 		<?php while ( have_posts() ) : the_post(); 
 		
@@ -36,7 +36,7 @@ get_header();
 		</div>
 		<div class="row" data-aos="zoom-in">
 		<div class="col-12 text-center">
-			<a href="<?php echo get_home_url(); ?>/category/blog/" class="customButton blackButton">Tous les articles <i class="fas fa-chevron-right fa-xs"></i></a>
+			<a href="<?php echo get_home_url(); ?>/category/blog/" class="customButton blackButton"><?php _e('Tous les articles', 'yachtsLyon_theme'); ?> <i class="fas fa-chevron-right fa-xs"></i></a>
 		</div>
 		</div>
 
