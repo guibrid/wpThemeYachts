@@ -63,7 +63,14 @@ get_header();
                 <?php wp_reset_postdata(); ?>
 
             <?php else: ?>
-                <img src="<?php echo get_template_directory_uri() . '/img/no-event.png'; ?>" class="img-fluid" style="margin-bottom:40px;" />
+                <?php
+                    if (ICL_LANGUAGE_CODE == "fr") {
+                        $noEventImg = 'no-event.png';
+                    } else {
+                        $noEventImg = 'no-event-en.png';
+                    }
+                    ?>
+                <img src="<?php echo get_template_directory_uri() . '/img/'.$noEventImg; ?>" class="img-fluid" style="margin-bottom:40px;" />
 
             <?php endif; ?>
 
