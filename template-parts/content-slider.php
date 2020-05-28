@@ -9,7 +9,7 @@ $my_query = new WP_Query( $args );
 
 if ($my_query->have_posts()) {?>
 
-    <div id="carouselExampleIndicators" class="carousel slide lazy" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide lazy" data-ride="carousel" data-interval="2000">
 
       <ol class="carousel-indicators">
       <?php $i = 0;
