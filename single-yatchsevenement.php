@@ -17,7 +17,7 @@ get_header();
 			<?php while ( have_posts() ) : the_post(); ?>
 			<div class="row eventHeader" data-aos="zoom-in">
 				<div class="col-md-6">
-					<h2><?php echo get_the_title().' - '.get_field( "event_date" ); ?></h2>
+					<h2><?php echo get_the_title(); ?><?php if (get_field( "event_booking_link" )) { echo ' - '.get_field( "event_date" ); } ?></h2>
 					<p><?php the_excerpt(); ?></p>
 				</div>
 				<div class="col-md-6 text-right">
