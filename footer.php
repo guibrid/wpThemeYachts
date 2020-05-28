@@ -18,11 +18,11 @@
 	<div id="sub-footer"><!-- #sub-footer -->
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 text-lg-left contact">
+				<div class="col-6 text-md-left contact">
 					<span><?php _e('Nous contacter', 'yachtsLyon_theme'); ?></span><br />
 					<a href="<?php echo get_home_url(); ?>/contact/" class="customButton whiteButton"><?php _e('Un devis ?', 'yachtsLyon_theme'); ?> <i class="fas fa-chevron-right fa-xs"></i></a>
 				</div>
-				<div class="col-lg-6 text-lg-left newsletter">
+				<div class="col-6 text-md-left newsletter">
 					<span><?php _e('Newsletter', 'yachtsLyon_theme'); ?></span><br />
 					<?php echo do_shortcode('[mc4wp_form id="322"]'); ?>
 				</div>

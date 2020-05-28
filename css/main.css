@@ -756,25 +756,46 @@ div#sub-footer {
     text-align: center;
 }
 
-div#sub-footer div.contact {
-    margin-bottom: 20px;
+div#sub-footer span , div#sub-footer a {
+    font-size: 10px;
+}
+div#sub-footer button {
+    font-size: 10px;
 }
 
 div.newsletter input[type=email] {
-    font-size: 13px;
+    font-size: 10px;
     padding: 7px;
     margin-right: 15px;
     margin-bottom: 10px;
-    width: 250px;
+    width: 100%;
     border-radius:5px;
     border:1px solid #000000;
 }
-
-@media (min-width: 992px) {
-    div#sub-footer div.contact {
-        margin-bottom: 0px;
+@media (min-width: 576px) {
+    div.newsletter input[type=email] {
+        
     }
 }
+@media (min-width: 768px) { 
+    div.newsletter input[type=email] {
+        font-size: 15px;
+        width: 150px;
+    }
+    div#sub-footer span , div#sub-footer a{
+        font-size: 15px;
+    }
+    div#sub-footer button {
+        font-size: 15px;
+    }
+ }
+
+ @media (min-width: 992px) {
+    div.newsletter input[type=email] {
+        width: 250px;
+    }
+ }
+
 
 /** FOOTER **/
 footer#colophon {
