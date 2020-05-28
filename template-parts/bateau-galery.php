@@ -3,7 +3,7 @@
     <?php $images = acf_photo_gallery('bateau_galerie', $post->ID);
     if( count($images) ){ ?>
     
-        <div id="bateauCarousel" class="carousel slide boatSlider" data-ride="carousel" style="border:10px solid black">
+        <div id="bateauCarousel" class="carousel slide boatSlider" data-ride="carousel" style="border:10px solid black" data-interval="2000">
             <ol class="carousel-indicators">
                 <?php foreach($images as $key => $image){ ?>
                     <li data-target="#bateauCarousel" data-slide-to="<?php echo $key; ?>" class="<?php if ($key == 0) { echo 'active'; } ?>"></li>
