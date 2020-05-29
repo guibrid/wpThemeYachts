@@ -192,3 +192,22 @@ add_action( 'after_setup_theme', 'register_navwalker' );
 
 
 
+/**
+ * Widget newssletter
+ */
+function newsletter_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Newsletter' ),
+        'id'            => 'sidebar-2',
+        'description'   => __( 'Add widgets for your blog here.', 'carbon' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title h5">',
+        'after_title'   => '</h2>',
+    ) );
+}
+
+add_action( 'widgets_init', 'newsletter_widgets_init' );
+
+
+

@@ -23,8 +23,12 @@
 					<a href="<?php echo get_home_url(); ?>/contact/" class="customButton whiteButton"><?php _e('Un devis ?', 'yachtsLyon_theme'); ?> <i class="fas fa-chevron-right fa-xs"></i></a>
 				</div>
 				<div class="col-6 text-md-left newsletter">
-					<span><?php _e('Newsletter', 'yachtsLyon_theme'); ?></span><br />
-					<?php echo do_shortcode('[contact-form-7 id="1190" title="Newsletter"]'); ?>
+					<?php if ( is_active_sidebar( 'sidebar-2' ) ) {
+						dynamic_sidebar( 'sidebar-2' );
+						}
+					?>
+					<span><?php //_e('Newsletter', 'yachtsLyon_theme'); ?></span><br />
+					<?php //echo do_shortcode('[contact-form-7 id="1190" title="Newsletter"]'); ?>
 					<?php //echo do_shortcode('[mc4wp_form id="322"]'); ?>
 				</div>
 			</div>

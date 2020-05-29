@@ -780,25 +780,6 @@ div.newsletter p {
  margin: 0;
 }
 
-.mailjet-opt-in {
-    font-size: 10px !important;
-}
-
-.wpcf7-list-item-label {
-    font-size: 10px !important;
-}
-
-div.newsletter  .wpcf7-response-output {
-    position: absolute;
-    font-size: 9px;
-    bottom: 0;
-    margin: 25px 0 5px 0;
-}
-
-div.newsletter span.wpcf7-list-item {
-    margin: 0 0 0 0 !important;
-}
-
 @media (min-width: 576px) {
     div.newsletter input[type=email] {
         margin-bottom:inherit;
