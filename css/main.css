@@ -759,6 +759,7 @@ div#sub-footer {
 div#sub-footer span , div#sub-footer a {
     font-size: 10px;
 }
+
 div#sub-footer button {
     font-size: 10px;
 }
@@ -772,6 +773,22 @@ div.newsletter input[type=email] {
     border-radius:5px;
     border:1px solid #000000;
 }
+
+div.newsletter {
+    position: relative;
+}
+
+div.newsletter p {
+ margin: 0;
+}
+
+div.newsletter  .wpcf7-response-output {
+    position: absolute;
+    font-size: 9px;
+    bottom: 0;
+    margin: 25px 0 5px 0;
+}
+
 @media (min-width: 576px) {
     div.newsletter input[type=email] {
         

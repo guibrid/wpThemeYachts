@@ -24,7 +24,8 @@
 				</div>
 				<div class="col-6 text-md-left newsletter">
 					<span><?php _e('Newsletter', 'yachtsLyon_theme'); ?></span><br />
-					<?php echo do_shortcode('[mc4wp_form id="322"]'); ?>
+					<?php echo do_shortcode('[contact-form-7 id="1190" title="Newsletter"]'); ?>
+					<?php //echo do_shortcode('[mc4wp_form id="322"]'); ?>
 				</div>
 			</div>
 		</div>
