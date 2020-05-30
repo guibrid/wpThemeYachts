@@ -15,6 +15,10 @@ $('.carousel').carousel();
 /* Init accordion */
 $('.collapse').collapse()
 
+if($(window).width() <= 768) {
+$('.coverNews').addClass('order-first')
+}
+
 /* Init Animation on Scrool */
 AOS.init();
 

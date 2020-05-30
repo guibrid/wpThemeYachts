@@ -24,7 +24,7 @@ get_header();
         the_post();
         
         $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),"large"); 
-        $imageBlock = '<div class="col-sm-6">
+        $imageBlock = '<div class="coverNews col-sm-6">
                         <div class="actu-cover" style="background-image: url('.$featured_img_url.')"></div>
                     </div>';
 
