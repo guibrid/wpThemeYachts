@@ -913,3 +913,35 @@ footer#colophon div.social a:hover {
         height: 500px;
     }
  }
+
+ /** PAGINATION ARTICLES **/
+ div.paginationBloc {
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+div.paginationBloc nav {
+    display: inline-block;
+}
+
+div.paginationBloc .page-numbers {
+	display: inline-block;
+	padding: 3px 15px;
+	font-size: 22px;
+	border: 1px solid rgba(198, 156, 108, 1);
+	color: rgba(198, 156, 108, 1);
+}
+div.paginationBloc .current {
+	border-color: black;
+	color:black;
+}
+div.paginationBloc a.page-numbers {
+	width: auto;
+	margin-bottom: 0;
+}
+
+div.paginationBloc a.page-numbers:hover {
+	color: #fff;
+	background-color: rgba(198, 156, 108, 1);
+	text-decoration: none;
+}

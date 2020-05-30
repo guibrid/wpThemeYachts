@@ -22,14 +22,13 @@ get_header();
     while ( have_posts() ) : 
     
         the_post();
-
+        
         $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),"large"); 
-
-        $imageBlock = '<div class="col-sm-6" data-aos="zoom-in">
+        $imageBlock = '<div class="col-sm-6">
                         <div class="actu-cover" style="background-image: url('.$featured_img_url.')"></div>
                     </div>';
 
-        $contentBlock = '<div class="col-sm-6" data-aos="zoom-in">
+        $contentBlock = '<div class="col-sm-6">
                             <h2>'.get_the_title().'</h2>
                             <p class="excerptActu">'.substr(get_the_excerpt(), 0, 350).'...</p>
                             <p class="dateActu">'.get_the_date( "d.m.Y").'</p>
@@ -51,6 +50,16 @@ get_header();
 
     <?php  endwhile; // End of the loop. ?>
 
+        <div class="paginationBloc">
+        <?php $nav =the_posts_pagination(array(
+        'prev_text'          => __( '<', 'twentyfifteen' ),
+        'next_text'          => __( '>', 'twentyfifteen' ),
+        'screen_reader_text' => __( '&nbsp;' )
+    )); 
+    $nav = str_replace('<h2 class="screen-reader-text">A</h2>', '', $nav);
+    echo $nav;
+    ?>
+        </div>
 
         </div>
 
