@@ -20,16 +20,13 @@
 			<div class="row">
 				<div class="col-6 text-md-left contact">
 					<span><?php _e('Nous contacter', 'yachtsLyon_theme'); ?></span><br />
-					<a href="<?php echo get_home_url(); ?>/contact/" class="customButton whiteButton"><?php _e('Un devis ?', 'yachtsLyon_theme'); ?> <i class="fas fa-chevron-right fa-xs"></i></a>
+					<a href="<?php echo get_home_url(); ?>/contact/" class="customButton whiteButton"><?php _e('Un devis ?', 'yachtsLyon_theme'); ?> <i class="fas fa-chevron-right fa-xs"></i></a><br/>
 				</div>
 				<div class="col-6 text-md-left newsletter">
 					<?php if ( is_active_sidebar( 'sidebar-2' ) ) {
 						dynamic_sidebar( 'sidebar-2' );
 						}
 					?>
-					<span><?php //_e('Newsletter', 'yachtsLyon_theme'); ?></span><br />
-					<?php //echo do_shortcode('[contact-form-7 id="1190" title="Newsletter"]'); ?>
-					<?php //echo do_shortcode('[mc4wp_form id="322"]'); ?>
 				</div>
 			</div>
 		</div>
@@ -54,7 +51,9 @@
 							<i class="fab fa-twitter fa-lg"></i>
 						</a>
 					</div>
-					<div class="copyright"> &copy;Copyright 2020 | <b>All right reserved PROACTIVE</b><br />Designed by marinemarcolet.com & Webaxis</div>
+					<div class="copyright">
+						<b>&copy; <script>document.write(new Date().getFullYear())</script> All right reserved PROACTIVE</b>  | 
+						<a class="textLink" href="<?php echo site_url('/mentions-legales'); ?>"><?php _e('Mentions légales', 'yachtsLyon_theme'); ?></a><br />Designed by marinemarcolet.com & Webaxis</div>
 				</div>
 			</div>
 		</div>

@@ -750,7 +750,7 @@ div#sub-footer {
     background-color: #000000;
     color: #ffffff;
     font-weight: bold;
-    padding: 15px 0 0px 0;
+    padding: 15px 0 20px 0;
     text-align: center;
 }
 
@@ -846,6 +846,11 @@ footer .copyright {
 
 footer .contactDetails {
     font-weight: 700;
+}
+
+footer a.textLink {
+    color: black;
+    text-decoration: none;
 }
 
 footer#colophon div.social a {
