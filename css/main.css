@@ -750,7 +750,7 @@ div#sub-footer {
     background-color: #000000;
     color: #ffffff;
     font-weight: bold;
-    padding: 15px 0 20px 0;
+    padding: 15px 0 0px 0;
     text-align: center;
 }
 
@@ -765,7 +765,7 @@ div#sub-footer button {
 div.newsletter input[type=email] {
     font-size: 10px;
     padding: 7px;
-    margin-right: 15px;
+    margin-right: 10px;
     margin-bottom: 10px;
     width: 100%;
     border-radius:5px;
@@ -776,9 +776,30 @@ div.newsletter {
     position: relative;
 }
 
-div.newsletter p {
- margin: 0;
+div.newsletter .mailjet-widget-form-group {
+    display: inline-block;
 }
+
+.mailjet_widget_front_container, .mailjet-widget-form-group {
+    margin-bottom: 0 !important;
+}
+
+.mailjet_widget_front_container .widget-title {
+    font-size: 10px !important;
+    font-family: 'Montserrat' !important ;
+    font-weight: bold !important;
+    margin-bottom: 3px !important;
+}
+
+div.newsletter input[type=submit] {
+    font-size: 10px !important;
+    margin-top: 3px;
+}
+
+span.mailjet_widget_form_message {
+    font-size: 10px !important;
+}
+
 
 @media (min-width: 576px) {
     div.newsletter input[type=email] {
@@ -790,11 +811,19 @@ div.newsletter p {
         font-size: 15px;
         width: 150px;
     }
+    div.newsletter input[type=submit] {
+        font-size: 15px !important;
+        margin-top: 0px;
+    }
     div#sub-footer span , div#sub-footer a{
         font-size: 15px;
     }
     div#sub-footer button {
         font-size: 15px;
+    }
+
+    .mailjet_widget_front_container .widget-title {
+        font-size: 15px !important;
     }
  }
 

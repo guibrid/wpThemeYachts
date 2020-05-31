@@ -15,12 +15,16 @@ $('.carousel').carousel();
 /* Init accordion */
 $('.collapse').collapse()
 
+/* Reorder cover and text on archives post page for small device */
 if($(window).width() <= 768) {
-$('.coverNews').addClass('order-first')
+  $('.coverNews').addClass('order-first')
 }
 
 /* Init Animation on Scrool */
 AOS.init();
+
+/* add button class to newsletter submit */
+$('#mailjetSubscriptionForm input[type=submit]').addClass('customButton whiteButton')
 
 //Recupere la hauteur du footer pour definir la margin-bottom du wrapper (sticky footer)
 $("div.wrapper").css({"padding-bottom": $(".footer-wrapper").height()});
