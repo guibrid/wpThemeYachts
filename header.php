@@ -18,6 +18,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() . '/img/favicon.png'; ?>" type="image/png" />
 </head>
 
 <body <?php body_class(); ?>>

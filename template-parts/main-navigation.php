@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-6 col-lg-2">
       <a href="<?php echo get_home_url(); ?>">
-        <img src="<?php echo get_template_directory_uri() . '/img/logo.png'; ?>" class="logo" />
+        <img src="<?php echo get_template_directory_uri() . '/img/logo.png'; ?>" class="logo" alt="Logo Yachts de Lyon" />
       </a>
     </div>
     <div class="col-6 col-lg-10" style="text-align:right; position:relative;">
