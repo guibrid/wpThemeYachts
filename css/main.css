@@ -32,6 +32,9 @@ div.footer-wrapper{
 div.site-content {
     background-color: white;
 }
+div.site-content a  {
+    color: #8c5c26;
+}
 
 .single-content a, p.has-text-color a{
     transition: 0.3s;
@@ -876,12 +879,12 @@ footer#colophon div.social a:hover {
 }
 
 .whiteButton {
-    color: #000000;
+    color: #000000  !important;
     background-color: #ffffff;
 }
 
 .blackButton {
-    color: #ffffff;
+    color: #ffffff !important;
     background-color: #000000;
 }
 

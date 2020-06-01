@@ -88,6 +88,13 @@ $(".wpml-ls-statics-shortcode_actions span:contains('Français')").html("FR");
 $(".wpml-ls-statics-shortcode_actions span:contains('Anglais')").html("EN");
 $(".wpml-ls-statics-shortcode_actions span:contains('English')").html("EN");
 $(".wpml-ls-statics-shortcode_actions span:contains('French')").html("FR");
+$(".wpml-ls-statics-shortcode_actions span:contains('Espagnol')").html("ES");
+$(".wpml-ls-statics-shortcode_actions span:contains('Español')").html("ES"); 
+$(".wpml-ls-statics-shortcode_actions span:contains('Inglés')").html("EN"); 
+$(".wpml-ls-statics-shortcode_actions span:contains('Francés')").html("FR");
+$(".wpml-ls-statics-shortcode_actions span:contains('Spanish')").html("ES");
+
+
 
 //$('.wpml-ls-display').remove();
   /*
