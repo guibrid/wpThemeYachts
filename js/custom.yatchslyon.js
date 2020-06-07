@@ -79,6 +79,8 @@ $(".js-overlay-start").unbind("click").bind("click", function(e) {
     $("#player").attr("src", src);
 });
 
+/* Append twitter content in div */
+$('#lastTweet').append($('#tweetContent').html());
 
 /* set first iten as active in Carousel */
 $("div.wp-block-alecaddd-custom-galery div.carousel-item:first-child").addClass( "active" );

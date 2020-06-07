@@ -566,6 +566,14 @@ div#eventCarousel {
 }
 
 /** Bateaux page **/
+.bateau-page .tweet-text {
+    border: 2px solid #c69c6d;
+    color: #c69c6d;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 10px;
+    margin: 0 0 20px 0;
+}
 .bateau-page .excerpt {
     text-align: center;
     margin-top: 25px;

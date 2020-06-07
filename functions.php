@@ -209,5 +209,16 @@ function newsletter_widgets_init() {
 
 add_action( 'widgets_init', 'newsletter_widgets_init' );
 
+/**
+ * Get Last Twitter
+ */
+function getTweets($user) {
+    $datas = file_get_contents('https://mobile.twitter.com/'.$user);
+
+    preg_match_all('/<div class="tweet-text" data-id="\d*">(.*?)<\/div>/s', $datas, $matchetweets, PREG_SET_ORDER);
+ echo $matchetweets[0][0]; 
+
+};
+
 
 
