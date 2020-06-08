@@ -879,7 +879,26 @@ footer .copyright {
 
 footer .contactDetails {
     font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 15px;
 }
+
+footer .social, footer .copyright {
+    text-align: center;
+}
+
+@media (min-width: 768px) { 
+    footer .contactDetails {
+        font-size: 17px;
+        text-align: left;
+    }
+
+    footer .social, footer .copyright {
+        text-align: right;
+    }
+
+ }
 
 footer a.textLink {
     color: black;

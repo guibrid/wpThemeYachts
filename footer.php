@@ -39,7 +39,7 @@
 				<div class="col-sm-6 contactDetails">
 					<span><?php _e('Tél', 'yachtsLyon_theme'); ?> : 04 72 56 51 23<br />Mail : contact@lesyachtsdelyon.com</span>
 				</div>
-				<div class="col-sm-6 text-right">
+				<div class="col-sm-6">
 					<div class="social">
 						<a href="https://www.facebook.com/pages/Les-Yachts-de-Lyon/215000789034" target="_blank">
 							<i class="fab fa-facebook-f fa-lg"></i>
