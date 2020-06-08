@@ -311,11 +311,15 @@ div#slider-homepage {
     background-color: #000000;
 }
 
+.contactSlider {display: none;}
+
 @media (min-width: 576px) {
 
     div#slider-homepage div.col-12 .newsblock p {
         font-size: 12px;
     }
+    .contactSlider {display: block;}
+
     
 }
 
