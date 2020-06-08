@@ -1,12 +1,12 @@
 /******** MOBILE NAVIGATION SLIDER TRIGGER */
 /* Set the width of the side navigation to 250px */
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("mySidenav").style.width = "250px";
 }
-    
+  
 /* Set the width of the side navigation to 0*/
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("mySidenav").style.width = "0";
 } 
 
 /* Init Home page, event and prestations slider */
@@ -17,7 +17,7 @@ $('.collapse').collapse()
 
 /* Reorder cover and text on archives post page for small device */
 if($(window).width() <= 768) {
-  $('.coverNews').addClass('order-first')
+$('.coverNews').addClass('order-first')
 }
 
 /* Init Animation on Scrool */
@@ -37,16 +37,36 @@ $(".carousel-inner .imgBlock").height(homeSliderHeight); // Set la hauteur du sl
 
 /* Même chose mais quand on resize pour recalculer dynamiquements les hauteurs des éléments */
 $(window).on('resize', function(){
-  var headerHeight = $("header#masthead").height()
-  var footerHeight = $(".footer-wrapper").height()-0.5;
-  var homeSliderHeight = $(window).height() - headerHeight - footerHeight;
-  $(".carousel-inner .imgBlock").height(homeSliderHeight);
+var headerHeight = $("header#masthead").height()
+var footerHeight = $(".footer-wrapper").height()-0.5;
+var homeSliderHeight = $(window).height() - headerHeight - footerHeight;
+$(".carousel-inner .imgBlock").height(homeSliderHeight);
 });
 
 /*Ajuster la hauteur du slider de la page bateau  */
 if($(window).width() >= 992) {
 $('.boatSlider img').height( $(window).height() - 100 ); 
 }
+
+/*Type de cover desktop ou mobile sur la homepage  */
+if($(window).width() <= 576) {
+  $('#carouselExampleIndicators .coverDesktop').css({"display": "none"});
+  $('#carouselExampleIndicators .coverMobile').css({"display": "block"});
+} else {
+  $('#carouselExampleIndicators .coverMobile').css({"display": "block"});
+  $('#carouselExampleIndicators .coverMobile').css({"display": "none"});
+}
+
+$(window).on('resize', function(){
+  /*Type de cover desktop ou mobile sur la homepage  */
+  if($(window).width() <= 576) {
+    $('#carouselExampleIndicators .coverDesktop').css({"display": "none"});
+    $('#carouselExampleIndicators .coverMobile').css({"display": "block"});
+  } else {
+    $('#carouselExampleIndicators .coverDesktop').css({"display": "block"});
+    $('#carouselExampleIndicators .coverMobile').css({"display": "none"});
+  }
+});
 
 /* Back to the top page button */
 var mybutton = document.getElementById("backTopButton");

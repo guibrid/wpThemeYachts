@@ -220,5 +220,14 @@ function getTweets($user) {
 
 };
 
+//Remove Google ReCaptcha code/badge everywhere apart from select pages
+add_action('wp_print_scripts', function () {
+	//Add pages you want to allow to array
+	if ( !is_page( array( 'contact','contactar' ) ) ){
+		wp_dequeue_script( 'google-recaptcha' );
+		//wp_dequeue_script( 'google-invisible-recaptcha' );
+	}
+});
+
 
 

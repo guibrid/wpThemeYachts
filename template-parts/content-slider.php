@@ -25,11 +25,12 @@ if ($my_query->have_posts()) {?>
         <?php $i = 0;
         while ( $my_query->have_posts() ) : $my_query->the_post();
             $active = ($i == 0) ? " active" : "";
-            $image = get_field('slider_background');
-            echo '<div class="carousel-item '.$active.'">';
-            /*if( !empty( $image ) ):*/ ?>
-              <div class="imgBlock" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div>
-            <?php /*endif; */
+            $imageDesktop = get_field('slider_background');
+            $imageMobile = get_field('image_en_background_mobile');
+            echo '<div class="carousel-item '.$active.'">'; ?>
+              <div class="imgBlock coverDesktop" style="background-image: url('<?php echo esc_url($imageDesktop['url']); ?>');"></div>
+              <div class="imgBlock coverMobile" style="background-image: url('<?php echo esc_url($imageMobile['url']); ?>');"></div>
+            <?php 
             echo '<div class="carousel-caption d-none d-md-block">
                   '.get_field( "slider_content" ).'
                   </div>';
