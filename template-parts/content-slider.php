@@ -31,7 +31,7 @@ if ($my_query->have_posts()) {?>
               <div class="imgBlock coverDesktop" style="background-image: url('<?php echo esc_url($imageDesktop['url']); ?>');"></div>
               <div class="imgBlock coverMobile" style="background-image: url('<?php echo esc_url($imageMobile['url']); ?>');"></div>
             <?php 
-            echo '<div class="carousel-caption d-none d-md-block">
+            echo '<div class="carousel-caption d-md-block">
                   '.get_field( "slider_content" ).'
                   </div>';
             echo '</div>';

@@ -262,6 +262,10 @@ div#slider-homepage div.col-12 {
     position: relative;
 }
 
+div#slider-homepage .carousel-caption h2 {
+    display: none;
+}
+
 div#slider-homepage div.col-12 .newsblock {
     position: absolute;
     right: 0px;
@@ -304,7 +308,7 @@ div#slider-homepage div.imgBlock {
 }
 
 div#slider-homepage .carousel-caption {
-    bottom: 10%;
+    bottom: 40%;
 }
 
 div#slider-homepage {
@@ -320,7 +324,13 @@ div#slider-homepage {
     }
     .contactSlider {display: block;}
 
-    
+    div#slider-homepage .carousel-caption h2 {
+        display: block;
+    }
+
+    div#slider-homepage .carousel-caption {
+        bottom: 10%;
+    }
 }
 
 @media (min-width: 768px) { 
