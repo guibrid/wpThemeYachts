@@ -19,7 +19,7 @@ if ($my_query2->have_posts()) {
             } else {
                 echo '<p>'.get_the_title().'</p>';
             };
-        echo '<p class="contactSlider"><b><span class="emailNews">contact@lesyachtsdelyon.com</span> Tél : 04 72 56 51 23</b></p></div></div>';
+        echo '<p class="contactSlider"><b><span class="emailNews"><a href="mailto:contact@lesyachtsdelyon.com" target="_blank">contact@lesyachtsdelyon.com</a></span> Tél : 04 72 56 51 23</b></p></div></div>';
 
     endwhile; 
     

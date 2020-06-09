@@ -37,7 +37,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 contactDetails">
-					<span><?php _e('Tél', 'yachtsLyon_theme'); ?> : 04 72 56 51 23<br />Mail : contact@lesyachtsdelyon.com</span>
+					<span><?php _e('Tél', 'yachtsLyon_theme'); ?> : 04 72 56 51 23<br />Mail : <a href="mailto:contact@lesyachtsdelyon.com" target="_blank">contact@lesyachtsdelyon.com</a></span>
 				</div>
 				<div class="col-sm-6">
 					<div class="social">

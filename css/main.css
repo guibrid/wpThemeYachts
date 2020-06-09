@@ -898,6 +898,11 @@ footer .contactDetails {
     margin-bottom: 15px;
 }
 
+footer .contactDetails a {
+    color: #000000!important;
+    text-decoration: none;
+}
+
 footer .social, footer .copyright {
     text-align: center;
 }
