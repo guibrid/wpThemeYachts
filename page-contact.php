@@ -22,6 +22,8 @@ get_header();
                 <?php
                     if (ICL_LANGUAGE_CODE == "fr") {
                         $form = '[contact-form-7 id="20" title="Formulaire de contact"]';
+                    } else if (ICL_LANGUAGE_CODE == "es") {
+                        $form = '[contact-form-7 id="2033" title="Contacto form"]';
                     } else {
                         $form = '[contact-form-7 id="703" title="Contact form"]';
                     }

@@ -41,38 +41,38 @@
     }
   
   /* The navigation menu links */
-  .sidenav #menu-mobile, .sidenav #menu-mobile-anglais {
+  .sidenav #menu-mobile, .sidenav #menu-mobile-anglais, .sidenav #menu-mobile-espagnol {
     margin: 0 20px 0 0;
     padding: 0;
     list-style: none;
   }
 
-  .sidenav #menu-mobile li, .sidenav #menu-mobile-anglais li{
+  .sidenav #menu-mobile li, .sidenav #menu-mobile-anglais li, .sidenav #menu-mobile-espagnol li{
     margin: 0 0 15px 0;
     padding: 0;
     list-style: none;
   }
 
-  .sidenav #menu-mobile li li , .sidenav #menu-mobile-anglais li li{
+  .sidenav #menu-mobile li li, .sidenav #menu-mobile-anglais li li, .sidenav #menu-mobile-espagnol li li{
     margin-bottom: 5PX;
   }
 
-  .sidenav #menu-mobile a , .sidenav #menu-mobile-anglais a{
+  .sidenav #menu-mobile a, .sidenav #menu-mobile-anglais a, .sidenav #menu-mobile-espagnol a{
     text-decoration: none;
     font-size: 20px;
     display: block;
     transition: 0.3s;
   }
 
-  .sidenav #menu-mobile ul.sub-menu a , .sidenav #menu-mobile-anglais ul.sub-menu a{
+  .sidenav #menu-mobile ul.sub-menu a, .sidenav #menu-mobile-anglais ul.sub-menu a, .sidenav #menu-mobile-espagnol ul.sub-menu a{
     font-size: 15px;
   }
   
   /* When you mouse over the navigation links, change their color */
-  .sidenav #menu-mobile a, .sidenav #menu-mobile-anglais a{
+  .sidenav #menu-mobile a, .sidenav #menu-mobile-anglais a, .sidenav #menu-mobile-espagnol a{
     color: #ffffff;
   }
-  .sidenav #menu-mobile a:hover, .sidenav #menu-mobile-anglais a:hover {
+  .sidenav #menu-mobile a:hover, .sidenav #menu-mobile-anglais a:hover, .sidenav #menu-mobile-espagnol a:hover {
     color: #c69c6c;
   }
   
