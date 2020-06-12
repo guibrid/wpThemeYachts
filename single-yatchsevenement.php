@@ -64,7 +64,7 @@ get_header();
 		
 			<div class="row" data-aos="zoom-in">
 				<div class="col-12 text-center">
-					<a href="<?php echo get_home_url(); ?>/evenements/" class="customButton blackButton"><?php _e('Tous les évènements', 'yachtsLyon_theme'); ?> <i class="fas fa-chevron-right fa-xs"></i></a><br /><br />
+					<a href="<?php echo get_site_url().'/evenements/?lang='.ICL_LANGUAGE_CODE; ?>" class="customButton blackButton"><?php _e('Tous les évènements', 'yachtsLyon_theme'); ?> <i class="fas fa-chevron-right fa-xs"></i></a><br /><br />
 				</div>
 			</div>
 
