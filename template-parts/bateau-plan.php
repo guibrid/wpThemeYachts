@@ -8,6 +8,8 @@
                     <?php
                     if (ICL_LANGUAGE_CODE == "fr") {
                         $titleConfig = 'configuration-title.gif';
+                    } else if (ICL_LANGUAGE_CODE == "es") {
+                        $titleConfig = 'configuration-title-es.gif';
                     } else {
                         $titleConfig = 'configuration-title-en.gif';
                     }
@@ -16,7 +18,8 @@
                 </div>
             </div>
             <div class="col-xl-8 offset-xl-2" data-aos="zoom-in">
-                <div class="text-center imgPlan"><img src="<?php echo get_field( "plan_du_bateau" )['url']; ?>" class="img-fluid" /></div>
+                <?php get_template_part( 'template-parts/bateau-plan-galery'); ?>
+                
                 <p class="text-center"><?php if (get_field( "plan_du_bateau" )) { ?><a target="_blank" href="<?php echo get_field( "bateau_lien_plan" )['url']; ?>" class="customButton blackButton"><?php _e('Télécharger le pdf', 'yachtsLyon_theme'); ?> <i class="fas fa-chevron-right fa-xs"></i></a><?php } ?></p>
             </div>
         </div>
