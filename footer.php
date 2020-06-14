@@ -63,6 +63,15 @@
 </div><!-- #page -->
 </div><!-- #warpper -->
 <?php wp_footer(); ?>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5668797-35"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-5668797-35');
+</script>
 
 </body>
 </html>
