@@ -38,7 +38,7 @@ get_header();
                     <?php the_content(); ?>
 
                 <?php endwhile;  endif; ?>
-                <iframe width="100%" scrolling="no" height="350" frameborder="0" src="http://maps.google.fr/maps?f=q&source=s_q&hl=fr&geocode=&q=15+Quai+Rambaud,+69002+Lyon,+Rh%C3%B4ne,+Rh%C3%B4ne-Alpes&sll=45.757643,4.822655&sspn=0.036769,0.104713&g=13+Quai+Rambaud,+69002+Lyon,+Rh%C3%B4ne,+Rh%C3%B4ne-Alpes&ie=UTF8&ll=45.754948,4.820595&spn=0.018388,0.052357&z=14&output=embed&s=AARTsJpzE5f1FpQwSOuHcX5YT2IfIslInQ" marginwidth="0" marginheight="0"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22274.34300005115!2d4.798466437793285!3d45.74527417910527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ebc8069d3ae7%3A0x69ee02dea1f18fa9!2sLES%20YACHTS%20DE%20LYON!5e0!3m2!1sfr!2sfr!4v1592210142160!5m2!1sfr!2sfr" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
 
         </div>
