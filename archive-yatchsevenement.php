@@ -23,6 +23,8 @@ get_header();
             $args = [
             'post_type' => 'yatchsevenement',
             'post_status' => 'publish',
+            'orderby' => 'date',
+            'order' => 'ASC',
             ];
 
             $my_query = new WP_Query( $args ); ?>
