@@ -159,6 +159,10 @@ nav#site-navigation li.boat-vaporetto .dropdown-item:hover {
     background: url('../img/icon-bateau-vaporetto.png') no-repeat left center;
 }
 
+nav#site-navigation li.boat-keywest .dropdown-item:hover {
+    background: url('../img/icon-bateau-keywest.png') no-repeat left center;
+}
+
 
 nav#site-navigation .dropdown-item {
     background-color: #000000;
