@@ -337,11 +337,14 @@ div#slider-homepage {
     }
 }
 
-@media (min-width: 768px) { 
+@media (max-width: 576px) { 
 
     /*div#slider-homepage div.imgBlock {
         height: 500px;
     }*/
+    .sub-footer, .newsletter{
+        display: none;
+    }
 
 
  }
