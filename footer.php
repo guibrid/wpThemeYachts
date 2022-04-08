@@ -37,14 +37,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 contactDetails">
-					<span><?php _e('Tél', 'yachtsLyon_theme'); ?> : 04 72 56 51 23<br />E-mail : <a href="mailto:contact@lesyachtsdelyon.com" target="_blank">contact@lesyachtsdelyon.com</a></span>
+					<span><?php _e('Tél', 'yachtsLyon_theme'); ?> : 04 72 56 51 23<br />E-mail : <a href="mailto:contact@lesyachtsdelyon.com" target="_blank">contact@lesyachtsdelyon.com</a><br /><a href="https://www.lesyachtsdelyon.com/mesures-covid-19/">Mesures COVID-19</a></span>
 				</div>
 				<div class="col-sm-6">
 					<div class="social">
 						<a href="https://www.facebook.com/pages/Les-Yachts-de-Lyon/215000789034" target="_blank">
 							<i class="fab fa-facebook-f fa-lg"></i>
 						</a>
-						<a href="https://www.instagram.com/bateau_l_evasion/?hl=fr" target="_blank">
+						<a href="https://www.instagram.com/lesyachtsdelyon/?hl=fr" target="_blank">
 							<i class="fab fa-instagram fa-lg"></i>
 						</a>
 						<a href="https://twitter.com/yachtsdelyon" target="_blank">
@@ -53,7 +53,7 @@
 					</div>
 					<div class="copyright">
 						<b>&copy; <script>document.write(new Date().getFullYear())</script> All right reserved PROACTIVE</b>  | 
-						<a class="textLink" href="<?php echo site_url('/mentions-legales'); ?>"><?php _e('Mentions légales', 'yachtsLyon_theme'); ?></a><br />Designed by marinemarcolet.com & Webaxis</div>
+						<a class="textLink" href="<?php echo site_url('/mentions-legales'); ?>"><?php _e('Mentions légales', 'yachtsLyon_theme'); ?></a><br />Designed by marinemarcollet.com & Webaxis</div>
 				</div>
 			</div>
 		</div>

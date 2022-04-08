@@ -27,7 +27,7 @@ get_header();
                             <div class="col-xl-8 offset-xl-2 text-center excerpt">
                                 <?php 
                                 
-                                if ( get_the_id()== 431  || get_the_id()== 640 || get_the_id()== 1597) { 
+                                /*if ( get_the_id()== 431  || get_the_id()== 640 || get_the_id()== 1597) { 
                                     ?>
                                     <script type="text/html" class="vapo" id="tweetContent">
                                     <?php getTweets('yachtsdelyonva1') ?>
@@ -40,7 +40,8 @@ get_header();
                                 
                                  ?>
                                 
-                                <div id="lastTweet"></div>
+                                <div id="lastTweet"></div>*/
+                                ?>
                                 <?php  the_excerpt(); ?>
                                 <?php if (get_field( "lien_reservation" )) { ?><a href="<?php echo get_field( "lien_reservation" ); ?>" target="_blank" class="customButton whiteButton"><?php _e('Réservation', 'yachtsLyon_theme'); ?> <i class="fas fa-chevron-right fa-xs"></i></a><?php } ?>
                                 <?php if (get_field( "lien_carte_dabonnement" )) { ?><a href="<?php echo get_field( "lien_carte_dabonnement" ); ?>" target="_blank" class="customButton whiteButton"><?php _e("Carte d'abonnement", 'yachtsLyon_theme'); ?> <i class="fas fa-chevron-right fa-xs"></i></a><?php } ?>
